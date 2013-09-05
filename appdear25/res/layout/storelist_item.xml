@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:paddingLeft="10dp"
+	android:paddingTop="10dp"
+	android:orientation="vertical"
+	android:padding="10dp"
+	android:background="@drawable/bg_item_state">
+	<TextView
+		android:id="@+id/store_name"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:textStyle="bold"
+		android:text="北京王府井店"
+		android:textSize="20sp"
+		android:textColor="@color/soft_list_item_tile_color"
+		style="@style/shadow" />
+	<TextView
+		android:id="@+id/store_dec"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="3dp"
+		android:textStyle="bold"
+		android:textSize="16sp"
+		android:text="王府井大街111号新东安市场一楼"
+		android:textColor="@color/soft_list_item_desc_color"
+		style="@style/shadow" />
+	<TextView
+		android:id="@+id/store_tel"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textStyle="bold"
+		android:layout_marginTop="3dp"
+		android:textSize="16sp"
+		android:text="王府井大街111号新东安市场一楼"
+		android:textColor="@color/soft_list_item_desc_color"
+		style="@style/shadow" />
+</LinearLayout>

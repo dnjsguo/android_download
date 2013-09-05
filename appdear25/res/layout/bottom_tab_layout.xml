@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:id="@+id/parent">
+	<!--底部功能菜单栏 -->
+	<!--底部功能菜单栏 -->
+	<LinearLayout
+		android:id="@+id/bottomlist"
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/nav_bg_1"
+		android:tileMode="repeat">
+		<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_weight="1">
+			<ImageView
+				android:id="@+id/firstpage_bg"
+				android:visibility="gone"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/common_icon_down_bg"
+				android:layout_centerInParent="true" />
+			<ImageView
+				android:id="@+id/firstpage_img"
+				android:src="@drawable/main_page_btn_1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true" />
+		</RelativeLayout>
+		<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_weight="1">
+			<ImageView
+				android:id="@+id/category_bg"
+				android:visibility="gone"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/common_icon_down_bg"
+				android:layout_centerInParent="true" />
+			<ImageView
+				android:id="@+id/category_img"
+				android:src="@drawable/category_page_btn_1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true" />
+		</RelativeLayout>
+		<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_weight="1">
+			<ImageView
+				android:id="@+id/ranking_bg"
+				android:visibility="gone"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/common_icon_down_bg"
+				android:layout_centerInParent="true" />
+			<ImageView
+				android:id="@+id/ranking_img"
+				android:src="@drawable/ranking_page_btn_1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true" />
+		</RelativeLayout>
+		<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_weight="1">
+			<ImageView
+				android:id="@+id/search_bg"
+				android:visibility="gone"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/common_icon_down_bg"
+				android:layout_centerInParent="true" />
+			<ImageView
+				android:id="@+id/search_img"
+				android:src="@drawable/search_page_btn_1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true" />
+		</RelativeLayout>
+		<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_weight="1">
+			<ImageView
+				android:id="@+id/more_bg"
+				android:visibility="gone"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/common_icon_down_bg"
+				android:layout_centerInParent="true" />
+			<ImageView
+				android:id="@+id/more_img"
+				android:src="@drawable/more_page_btn_1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true" />
+		</RelativeLayout>
+	</LinearLayout>
+</LinearLayout>

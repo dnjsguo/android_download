@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_marginTop="0dp">
+	<RelativeLayout
+		android:layout_width="290dp"
+		android:layout_height="wrap_content"
+		android:background="@drawable/uese_login_in_bg_top02"
+		android:visibility="visible"
+		android:id="@+id/reg_login_in">
+		<EditText
+			android:id="@+id/user_login_in_01"
+			android:background="@drawable/edit_login"
+			android:paddingLeft="5.0dp"
+			android:saveEnabled="true"
+			android:layout_width="fill_parent"
+			android:layout_height="40.0dip"
+			android:layout_marginLeft="20dp"
+			android:layout_marginRight="20dp"
+			android:textSize="15sp"
+			android:singleLine="true"
+			android:layout_marginTop="30dp"
+			android:maxLength="25"
+			android:layout_alignParentTop="true"
+			android:hint="请输入用户名" />
+		<EditText
+			android:id="@+id/user_login_in_02"
+			android:background="@drawable/edit_login"
+			android:paddingLeft="5dp"
+			android:saveEnabled="true"
+			android:layout_width="fill_parent"
+			android:layout_height="40.0dip"
+			android:layout_marginLeft="20dp"
+			android:layout_marginRight="20dp"
+			android:textSize="15.0dip"
+			android:layout_marginTop="10dp"
+			android:inputType="textPassword"
+			android:layout_below="@+id/user_login_in_01"
+			android:maxLength="16"
+			android:hint="请输入密码" />
+		<!--会员注册 -->
+
+		<!-- checkbox -->
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/user_login_in_02"
+			android:layout_marginLeft="20dp"
+			android:layout_marginTop="10dp"
+			android:id="@+id/user_login_in_checkbox"
+			android:visibility="visible">
+			<CheckBox
+				android:id="@+id/login_in_checkbox"
+				android:layout_width="25dp"
+				android:layout_height="25dp"
+				android:checked="true"
+				android:button="@drawable/radiobuttonselect" />
+			<TextView
+				android:text="下次自动登录"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="@color/black1" />
+		</LinearLayout>
+		<!-- 
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="注册"
+			android:clickable="true"
+			android:textStyle="bold"
+			android:textColor="@color/white"
+			android:paddingRight="25dp"
+			android:textSize="18sp"
+			android:paddingLeft="25dp"
+			android:background="@drawable/regeste_btn_selector"
+			android:layout_alignParentLeft="true"
+			android:layout_marginTop="20dp"
+			android:layout_marginLeft="30dp"
+			android:layout_below="@+id/user_login_in_02"
+			android:paddingTop="5dp"
+			android:id="@+id/user_text_login_01" />
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:clickable="true"
+			android:textStyle="bold"
+			android:background="@drawable/login_btn_selector"
+			 
+			android:layout_alignParentRight="true"
+			android:id="@+id/image_login_in_button"
+			android:text="登录"
+			android:paddingRight="25dp"
+			android:textSize="18sp"
+			android:paddingLeft="25dp"
+			android:layout_below="@+id/user_login_in_02"
+			android:layout_marginTop="20dp"
+			android:layout_marginRight="30dp"
+			android:textColor="@color/white" />
+			 -->
+			 <TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:clickable="true"
+					android:background="@drawable/login_btn_selector"
+					android:id="@+id/image_login_in_button"
+					android:text="登录"
+					android:textSize="18sp"
+					android:paddingLeft="25dp"
+					android:layout_alignTop="@+id/user_text_login_01"
+					android:layout_marginRight="38dp"
+					android:layout_alignParentRight="true"
+					android:paddingRight="25dp"
+					android:paddingTop="5dp"
+					android:textColor="@color/white" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:clickable="true"
+					android:background="@drawable/regeste_btn_selector"
+					android:textSize="18sp"
+					android:layout_marginTop="10dp"
+					android:layout_below="@+id/user_login_in_checkbox"
+					android:layout_alignParentLeft="true"
+					android:layout_marginLeft="38dp"
+					android:text="注册"
+					android:paddingTop="5dp"
+					android:paddingLeft="25dp"
+					android:paddingRight="25dp"
+					android:textColor="@color/white"
+					android:id="@+id/user_text_login_01" />
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="5dp"
+			android:layout_below="@+id/image_login_in_button" />
+	</RelativeLayout>
+</LinearLayout>

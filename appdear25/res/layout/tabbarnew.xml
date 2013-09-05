@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	>
+	<!-- top container -->
+	<LinearLayout
+		android:id="@+id/tabbar_layout_topContainer"
+		android:layout_width="fill_parent"
+		android:layout_height="42dp"
+		android:orientation="horizontal"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp">
+		<!-- fist item -->
+		<FrameLayout
+			android:id="@+id/tabbar_linearlayout_fistItemClick"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_weight="1"
+			android:layout_marginTop="3dip"
+			android:layout_marginBottom="3dip"
+			android:background="@drawable/tab_bg_newz">
+			<RelativeLayout
+				android:id="@+id/tabbar_linearlayout_fistItem"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent">
+			</RelativeLayout>
+			<TextView
+				android:id="@+id/tabbar_tv_title_1"
+				android:layout_width="wrap_content"
+				android:layout_gravity="center"
+				android:layout_height="wrap_content"
+				android:textSize="18sp" />
+		</FrameLayout>
+		<!-- 分隔符 -->
+		<LinearLayout
+			android:layout_width="1dp"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_vertical">
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="@drawable/tab_spnner_line_new" />
+		</LinearLayout>
+		<!-- second item -->
+		<FrameLayout
+			android:id="@+id/tabbar_linearlayout_secondItemClick"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_weight="1"
+			android:layout_marginTop="3dip"
+			android:layout_marginBottom="3dip"
+			android:background="@drawable/tab_bg_newzhong">
+			<RelativeLayout
+				android:id="@+id/tabbar_linearlayout_secondItem"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+			</RelativeLayout>
+			<TextView
+				android:id="@+id/tabbar_tv_title_2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:textSize="18sp" />
+		</FrameLayout>
+		<!-- 分隔符 -->
+		<LinearLayout
+			android:layout_width="1dp"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_vertical">
+			<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="@drawable/tab_spnner_line_new" />
+		</LinearLayout>
+		<!-- third item -->
+		<FrameLayout
+			android:id="@+id/tabbar_linearlayout_thirdItemClick"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_weight="1"
+			android:layout_marginTop="3dip"
+			android:layout_marginBottom="3dip"
+			android:background="@drawable/tab_bg_newy">
+			<RelativeLayout
+				android:id="@+id/tabbar_linearlayout_thirdItem"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+				<!-- 角标 -->
+				<ImageView
+					android:id="@+id/jiaotag"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_alignParentTop="true" />
+			</RelativeLayout>
+			<TextView
+				android:id="@+id/tabbar_tv_title_3"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:textSize="18sp"/>
+		</FrameLayout>
+	</LinearLayout>
+	<!-- listview Container -->
+	<LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/tabbar_layout_ContentContainer"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_marginTop="2dp"
+		android:layout_weight="1">
+		<LinearLayout
+			xmlns:android="http://schemas.android.com/apk/res/android"
+			android:id="@+id/tabbar_layout_ContentContainer_1"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:orientation="vertical"
+			android:background="@drawable/soft_list_item_unselected_bg">
+		</LinearLayout>
+		<LinearLayout
+			xmlns:android="http://schemas.android.com/apk/res/android"
+			android:id="@+id/tabbar_layout_ContentContainer_2"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:orientation="vertical"
+			android:background="@drawable/soft_list_item_unselected_bg">
+		</LinearLayout>
+		<LinearLayout
+			xmlns:android="http://schemas.android.com/apk/res/android"
+			android:id="@+id/tabbar_layout_ContentContainer_3"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:orientation="vertical"
+			android:background="@drawable/soft_list_item_unselected_bg">
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:paddingLeft="10dp"
+	android:paddingTop="20dp"
+	android:paddingBottom="20dp"
+	android:background="@drawable/bg_item_state">
+	<ImageView
+		android:id="@+id/point_image"
+		android:layout_marginLeft="5dip"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:src="@drawable/common_green_star_full_yellow" />
+	<TextView
+		android:id="@+id/point_info"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/point_image"
+		android:layout_centerVertical="true"
+		android:layout_marginRight="10dp"
+		android:layout_marginLeft="10dp"
+		android:textStyle="bold"
+		android:textSize="18sp"
+		android:textColor="@color/soft_list_item_tile_color"
+		style="@style/shadow" />
+</RelativeLayout>

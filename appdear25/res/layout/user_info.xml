@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- jdan 2011-07 用户头信息显示 -->
+<LinearLayout
+	android:id="@+id/user_info_control"
+	android:layout_height="fill_parent"
+	android:layout_width="fill_parent"
+	android:orientation="vertical"
+	android:background="@drawable/user_info_bg"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<RelativeLayout
+		android:id="@+id/widget21"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:padding="5dp">
+		<ImageView
+			android:id="@+id/header_user"
+			android:layout_width="59dp"
+			android:layout_height="59dp"
+			android:src="@drawable/user_icon_default"
+			android:layout_alignParentLeft="true"
+			android:layout_marginTop="5dip"
+			android:layout_marginLeft="5dip"
+			android:layout_marginBottom="5dip">
+		</ImageView>
+		<TextView
+			android:id="@+id/useraccount_1"
+			android:layout_width="wrap_content"
+			android:text=""
+			android:layout_weight="1"
+			android:layout_height="wrap_content"
+			android:layout_toRightOf="@+id/header_user"
+			android:layout_toLeftOf="@+id/widget21"
+			android:layout_marginLeft="10dp"
+			android:layout_alignTop="@+id/header_user"
+			android:textSize="18sp"
+			android:textStyle="bold"
+			style="@style/shadow"
+			android:textColor="@color/soft_list_item_tile_color" />
+		<TextView
+			android:id="@+id/tuseraccount_3"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:layout_alignLeft="@+id/useraccount_1"
+			android:layout_below="@+id/useraccount_1"
+			android:layout_marginTop="5dp"
+			android:text="等级:"
+			android:textSize="14sp"
+			android:textStyle="bold"
+			style="@style/shadow"
+			android:textColor="@color/soft_list_item_desc_color" />
+		<TextView
+			android:id="@+id/useraccount_3"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:layout_alignTop="@+id/tuseraccount_3"
+			android:layout_toRightOf="@+id/tuseraccount_3"
+			android:text=""
+			android:textSize="14sp"
+			style="@style/shadow"
+			android:layout_marginLeft="3dp"
+			android:textStyle="bold"
+			android:textColor="@color/soft_list_item_desc_color" />
+		<RelativeLayout
+			android:id="@+id/widget21"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:background="@drawable/whiterounded_half_bg3"
+			android:layout_marginRight="5dp"
+			android:layout_centerVertical="true"
+			android:paddingLeft="7dp"
+			android:paddingTop="3dp"
+			android:paddingBottom="3dp"
+			android:paddingRight="7dp">
+			<TextView
+				android:id="@+id/tuseraccount_2"
+				android:layout_width="wrap_content"
+				android:text="账户余额 : "
+				android:layout_height="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:layout_marginLeft="5dp"
+				android:layout_marginTop="3dp"
+				style="@style/shadow"
+				android:textColor="@color/soft_list_item_desc_color"
+				android:textSize="14sp"
+				android:textStyle="bold" />
+			<TextView
+				android:id="@+id/useraccount_2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_toRightOf="@+id/tuseraccount_2"
+				android:text=""
+				android:textSize="14sp"
+				android:layout_alignTop="@+id/tuseraccount_2"
+				android:textColor="@color/user_info" />
+			<TextView
+				android:id="@+id/tuseraccount_4"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="积分 : "
+				android:layout_below="@+id/tuseraccount_2"
+				android:layout_marginTop="3dp"
+				style="@style/shadow"
+				android:layout_marginBottom="3dp"
+				android:layout_alignLeft="@+id/tuseraccount_2"
+				android:textSize="14sp"
+				android:textStyle="bold"
+				android:textColor="@color/soft_list_item_desc_color" />
+			<TextView
+				android:id="@+id/useraccount_4"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text=""
+				android:layout_toRightOf="@+id/tuseraccount_4"
+				android:textSize="14sp"
+				android:layout_alignTop="@+id/tuseraccount_4"
+				android:textColor="@color/user_info" />
+		</RelativeLayout>
+	</RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@color/white">
+	<!-- Header -->
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+		android:id="@+id/top"
+		android:orientation="vertical">
+		<!-- content -->
+		<com.appdear.client.commctrls.UesrInfoLayout
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:id="@+id/userinfo_top" />
+	</LinearLayout>
+	<ScrollView
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_below="@+id/top"
+		android:background="@color/white">
+		<LinearLayout
+			android:id="@+id/layout"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_below="@+id/top"
+			android:orientation="vertical">
+			<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="15dp"
+				android:layout_marginRight="15dp"
+				android:layout_marginTop="10dp"
+				android:orientation="horizontal">
+				<TextView
+					android:id="@+id/oldpwdtext"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="    旧密码"
+					android:layout_centerVertical="true"
+					android:textColor="@color/soft_list_item_tile_color"
+					android:layout_gravity="center_vertical" />
+				<EditText
+					android:id="@+id/oldpwd"
+					android:layout_width="fill_parent"
+					android:layout_height="40dp"
+					android:singleLine="true"
+					android:password="true"
+					android:layout_marginLeft="5dp"
+					android:background="@drawable/edit_login" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="15dp"
+				android:layout_marginRight="15dp"
+				android:layout_marginTop="10dp"
+				android:orientation="horizontal">
+				<TextView
+					android:id="@+id/oldpwdtext"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="    新密码"
+					android:textColor="@color/soft_list_item_tile_color"
+					android:layout_gravity="center_vertical" />
+				<EditText
+					android:id="@+id/newpwd"
+					android:layout_width="fill_parent"
+					android:layout_height="40dp"
+					android:singleLine="true"
+					android:password="true"
+					android:hint="6-16个字符之间"
+					android:layout_marginLeft="5dp"
+					android:background="@drawable/edit_login" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="15dp"
+				android:layout_marginRight="15dp"
+				android:layout_marginTop="10dp"
+				android:orientation="horizontal">
+				<TextView
+					android:id="@+id/confirmpwdText"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="确认密码"
+					android:textColor="@color/soft_list_item_tile_color"
+					android:layout_gravity="center_vertical" />
+				<EditText
+					android:id="@+id/confirmpwd"
+					android:layout_width="fill_parent"
+					android:layout_height="40dp"
+					android:singleLine="true"
+					android:password="true"
+					android:hint="6-16个字符之间"
+					android:layout_marginLeft="5dp"
+					android:background="@drawable/edit_login" />
+			</LinearLayout>
+			<RelativeLayout
+				android:id="@+id/alterpwd_button"
+				android:layout_width="fill_parent"
+				android:layout_height="35dp"
+				android:layout_below="@+id/tablelayout"
+				android:layout_marginTop="20dp">
+				<RelativeLayout
+					android:id="@+id/click_button_update"
+					android:layout_width="150dp"
+					android:layout_height="wrap_content"
+					android:clickable="true"
+					android:layout_alignRight="@+id/confirmpwd"
+					android:layout_alignParentRight="true"
+					android:layout_marginRight="15dp"
+					android:background="@drawable/common_button_blue"
+					android:layout_centerHorizontal="true">
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:id="@+id/userprofile_update"
+						android:text="@string/userUpdate"
+						android:textColor="#ffffff"
+						android:textSize="18sp"
+						android:layout_centerInParent="true" />
+				</RelativeLayout>
+			</RelativeLayout>
+		</LinearLayout>
+	</ScrollView>
+</RelativeLayout>

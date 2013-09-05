@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zxy="http://meiyitianabc.blog.163.com"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/bg_item_state" >
+
+      <com.appdear.client.commctrls.AsynLoadImageView
+            android:id="@+id/category_image"
+            android:layout_width="105dp"
+        	android:layout_height="68dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+ 			android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+             android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            zxy:imageUrl="1" />
+    <!--
+	<LinearLayout
+		android:gravity="center_vertical"
+		android:layout_width="wrap_content"
+		android:orientation="horizontal"
+		android:layout_alignParentRight="true"
+		android:id="@+id/category_listitem_right"
+		android:layout_height="69dp"
+		android:paddingLeft="5dp"
+		android:paddingRight="15dip">
+		<ImageView
+			android:src="@drawable/right_button_show"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="4dp" />
+	</LinearLayout>
+
+    -->
+
+    <RelativeLayout
+        android:id="@+id/category_listitem_rigthcontainer"
+        android:layout_toRightOf="@+id/category_image"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp" android:paddingRight="12dp">
+
+        <TextView
+            android:id="@+id/category_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/soft_list_item_tile_color"
+            android:textSize="18sp"
+            android:ellipsize="none" 
+            android:textStyle="bold" 
+            android:singleLine="true"/>
+
+        <TextView
+            android:id="@+id/category_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/category_name"
+            android:paddingLeft="15dip"
+            android:textColor="@color/soft_list_item_desc_color"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/category_tip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/category_name"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/soft_list_item_desc_color"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:ellipsize="none" />
+
+        <TextView
+            android:id="@+id/category_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginLeft="50dp"
+            android:layout_below="@+id/category_name" android:visibility="gone"/>
+    </RelativeLayout>
+
+</RelativeLayout>

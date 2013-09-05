@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.appdear.client"
+      android:versionCode="18" android:versionName="2.6">
+    <uses-sdk android:minSdkVersion="7" />
+    <!--全局权限 -->
+    <user-permission android:name="Context.MODE_WORLD_READABLE" />
+    <user-permission android:name="Context.MODE_WORLD_WRITEABLE" />
+ 	<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+	<uses-permission  android:name="android.permission.ACCESS_NETWORK_STATE"/> 
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.test.runner" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />  
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.RUN_INSTRUMENTATION" />
+	<uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+	<uses-permission android:name="android.permission.RKILL_BACKGROUND_PROCESSES"/>
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
+	<uses-permission android:name="android.permission.INSTALL_PACKAGES"></uses-permission>
+	<uses-permission android:name="android.permission.DELETE_PACKAGES"></uses-permission>
+	<uses-permission android:name="android.permission.DELETE_PACKAGES"></uses-permission>
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+	<!-- 读手机状态权限 -->
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.READ_CONTACTS" />
+	<uses-permission android:name="android.permission.WRITE_CONTACTS" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.SEND_SMS" /> 
+	<uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="com.android.settings" />
+    <uses-permission android:name="android.permission.READ_LOGS" /> 
+    
+	<com.appstore.service></com.appstore.service>
+    <application android:name="com.appdear.client.service.MyApplication"
+    	android:screenOrientation="portrait"
+    	
+ 	 	android:theme="@style/appdear_theme" android:icon="@drawable/logo" android:label="@string/app_name">
+ 	 	<receiver android:name="com.appdear.client.BootInstalledchangeReceiver">
+ 	 		<intent-filter>
+              <action android:name="android.intent.action.BOOT_COMPLETED"/>
+              <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+              <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+            <action android:name="android.intent.action.PACKAGE_ADDED" />
+	        <action android:name="android.intent.action.PACKAGE_REMOVED" />
+	        <data android:scheme="package" />
+            </intent-filter>
+ 	 	</receiver>
+ 	 	<receiver android:name="com.appdear.client.NetworkStateReceiver">
+ 	 		<intent-filter>
+              <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+              <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+ 	 	</receiver>
+ 	 	
+        <activity android:name="SplashActivity"    
+        		  android:label="@string/app_name" android:icon="@drawable/logo"
+        		  android:screenOrientation="portrait" android:launchMode="singleTop">  
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>  
+        
+           <!-- oyys -->
+       	<activity android:name=".ShareOyysMainActivity" android:screenOrientation="portrait" >
+       	  	
+       	</activity>
+       	<activity android:name=".NoviceGuideActivity" android:screenOrientation="portrait" >
+       	  	
+       	</activity>
+       	  	<activity android:name="MyCommentlistActivity" android:screenOrientation="portrait" >
+       	  	
+       	</activity>
+       
+       	<activity android:name=".OyysAllAppsActivity"    android:screenOrientation="portrait">
+       	</activity>
+       	<activity android:name="MoreUserLoginInActivity"    android:screenOrientation="portrait">
+       	</activity>
+       	<activity android:name=".OyysAlreadyActivity"   android:screenOrientation="portrait">
+       	</activity>
+       	<activity android:name=".AlterUserRegActivity"   android:screenOrientation="portrait" android:theme="@style/FullScreenDialog">
+       	</activity>
+        
+       	 <activity android:name="AlterUserShare163Activity"  android:screenOrientation="portrait" android:theme="@style/FullScreenDialog"></activity>
+       	 <activity android:name=".MoreUserLoginActivity"   android:windowSoftInputMode="stateHidden|adjustResize"    android:screenOrientation="portrait"></activity>
+        <activity android:name="AlterInstalledRestoreActivity"  android:screenOrientation="portrait" android:theme="@style/FullScreenDialog"></activity>
+       	<activity android:name="AlterUninstalledRecommendActivity"  android:screenOrientation="portrait" android:theme="@style/FullScreenDialog"></activity> 	
+       	<!--end  -->
+        <activity  android:name=".MainActivity" android:launchMode="singleTask"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait" ></activity>
+        <activity android:name=".AlertDialogView" android:theme="@android:style/Theme.Dialog"  android:screenOrientation="portrait"></activity>
+       	<activity android:name=".CategoryAppActivity"  android:screenOrientation="portrait"></activity>
+       	<activity android:name=".UpdateDialog"  android:screenOrientation="portrait" android:theme="@style/FullScreenDialog"></activity>
+       	<activity android:name=".QianmingDialog"  android:screenOrientation="portrait" android:theme="@style/FullScreenDialog"></activity>
+       	
+       	<activity android:name=".CategoryDetailsActivity"  android:screenOrientation="portrait"></activity>
+       	<activity android:name=".CategorySubjectDetailsActivity"  android:screenOrientation="portrait"></activity>
+       	<activity android:name=".CategoryGameActivity"  android:screenOrientation="portrait"></activity>
+       	<activity android:name=".CateGoryMainActivity" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+       	<activity android:name=".CategoryTopicActivity" android:screenOrientation="portrait"></activity>
+       	<activity android:name="CategoryDetailListActivity" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+       	
+       	<!--2.0新增匹配（万花筒）  （适用人群-使用场景-职业）  -->
+       	<activity android:name=".MatchMainActivity" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+       	<activity android:name=".MatchTargetUsersGridActivity" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+       	<activity android:name=".MatchUsageScenarioActivity" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+       	<activity android:name=".MatchProfessionActivity" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+       	<activity android:name=".MatchSoftListActivity" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+       	
+       	<activity android:name=".HomePageBestListActivity"  android:screenOrientation="portrait"></activity>
+       	<activity android:name=".HomePageMainActivity"  android:screenOrientation="portrait"></activity>
+       	<activity android:name=".HomePageNewSoftListActivity"  android:screenOrientation="portrait"></activity>
+       	<activity android:name=".HomePageSpecialListActivity" android:screenOrientation="portrait" ></activity>
+       	
+       	<activity android:name=".MatchTargetUsersGridActivity"  android:screenOrientation="portrait"></activity>
+       	<activity android:name=".MoreManagerActivity"  android:screenOrientation="portrait"></activity>
+       	<activity android:name=".download.MoreManagerDownloadActivity" android:screenOrientation="portrait"></activity>
+       	<service android:name=".download.FileDownloaderService" android:screenOrientation="portrait"/>
+       	<activity android:name=".MoreManagerInstalledActivity"  android:screenOrientation="portrait"></activity>
+       	<activity android:name=".MoreManagerUpdateActivity"  android:screenOrientation="portrait"></activity>
+       	<activity android:name="MoreFeedBackActivity"   android:screenOrientation="portrait"  android:windowSoftInputMode="stateHidden|adjustResize"   ></activity>
+       	<activity android:name="MoreAboutActivity" android:screenOrientation="portrait"></activity>
+       	<activity android:name="MoreSettingsActivity" android:screenOrientation="portrait"></activity>
+       	 
+       	<activity android:name=".MoreUserCenterMainActivity"  android:screenOrientation="portrait"></activity>
+       	<activity android:name=".MoreUserFindPwdActivity"  android:screenOrientation="portrait"></activity>
+      
+       	<activity android:name=".MoreUserRegActivity"  android:windowSoftInputMode="stateHidden|adjustResize"  android:screenOrientation="portrait"></activity>
+       	<activity android:name="MoreHelpMainActivity"  android:screenOrientation="portrait"></activity>
+       	<activity android:name="MoreAboutActivity"  android:screenOrientation="portrait"></activity>
+       	<activity android:name="MoreUserDingActivity"  android:screenOrientation="portrait"></activity>
+       	<activity android:name="UserAlterPwd"  android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+       	
+       	<activity android:name="RankingMainActivity"  android:screenOrientation="portrait"></activity>
+       	<activity android:name=".RankingPayForActivity"  android:screenOrientation="portrait"></activity>
+       	<activity android:name=".RankingPayFreeActivity" android:screenOrientation="portrait"></activity>
+       	<activity android:name=".RankingSalesActivity" android:screenOrientation="portrait"></activity>
+       	
+       	<activity android:name=".SearchActivity" android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait"></activity>
+       	<activity android:name=".SearchResultActivity"  android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustPan" android:launchMode="singleTask"></activity>
+       	<activity android:name=".SoftwareDetailAuthorInfoActivity"  android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+       	<activity android:name=".SoftwareDetailCommentActivity" android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait"  android:launchMode="singleTask"></activity>
+       	<activity android:name=".SoftWareDetailInfoActivity" android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+       	<activity android:name=".SoftwareMainDetilActivity" android:windowSoftInputMode="stateHidden|adjustPan"  android:screenOrientation="portrait"></activity>
+       	<activity android:name=".SoftwareMainADDetilActivity" android:windowSoftInputMode="stateHidden|adjustPan"  android:screenOrientation="portrait"></activity>
+       	
+       	<activity android:name="SoftDetailPermissions"  android:screenOrientation="portrait"></activity>
+       	
+       <activity android:name="MoreHelpPointActivity"  android:screenOrientation="portrait" ></activity>
+       	<activity android:name="XinxianMyShareActivity"   android:screenOrientation="portrait"></activity>
+       	<activity android:name="XinxianShareActivity"  android:screenOrientation="portrait"></activity>
+        <activity android:name="XinxianShareActivity"  android:screenOrientation="portrait"></activity>
+        <activity android:name="MyShareListActivity"  android:screenOrientation="portrait"></activity>
+        
+       <!-- 2011-06-29jdan-->
+   	  	<activity android:name=".MoreUserPointActivity" android:screenOrientation="portrait"></activity> 
+   	    <activity android:name=".UserCenterOrderActivity"  android:screenOrientation="portrait"></activity> 
+    	<activity android:name=".UserInfoActivity" android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait"></activity>
+    	<activity android:name=".OrderListActivity" android:screenOrientation="portrait"></activity>
+    	<activity android:name=".PointListActivity"  android:screenOrientation="portrait"></activity> 
+    	
+    	<activity android:name=".UserMessagelistActivity" android:screenOrientation="portrait"></activity>
+   		<activity android:name=".MessageListActivity"  android:screenOrientation="portrait"></activity>
+   		<activity android:name=".FavoriteListActivity"  android:screenOrientation="portrait"></activity> 
+   		<activity android:name=".UserCenterFavoriteActivity" android:screenOrientation="portrait"></activity> 
+    	
+        <service android:name="com.appdear.client.UpdateAppService">
+		</service>	
+		<activity android:name="MoreUserDingActivity"  android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustResize"/>
+		<activity android:name="MorePhoneStoreActivity"  android:screenOrientation="portrait"/>
+		<activity android:name="MorePhoneStoreInfoActivity"  android:screenOrientation="portrait"/>
+		<activity android:name="ShowServerInfoDialog" android:screenOrientation="portrait"  />
+		 <service android:name="com.appdear.client.service.AppdearService">
+		</service>
+		 <service android:name="com.appdear.client.service.UpdateService">
+		</service>
+		<!--  
+		 <service android:name="com.appdear.client.service.RecycledImageService">
+		</service>
+		-->
+		<activity android:name="StoreListActivity"   android:screenOrientation="portrait"/>
+		<activity android:name="MoreManagerNoNetActivity"   android:screenOrientation="portrait" android:launchMode="singleTask"/>
+		<activity android:name="MoreAboutActivityNoNet"   android:screenOrientation="portrait" android:launchMode="singleInstance"/>
+		<activity android:name="NewUsersInfo"  android:screenOrientation="portrait" android:theme="@style/FullScreenDialog"></activity>
+		
+		<activity android:name="ContactOperateActivity"   android:screenOrientation="portrait"/>
+		<activity android:name="BeiFenActivity"   android:screenOrientation="portrait"/>
+		<!-- 接收通知启动服务 
+		<receiver android:name="com.appdear.client.service.StartUpBackgroundServiceReceieve">
+ 	 		<intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+ 	 	</receiver>-->
+ 	 	 
+    </application>
+</manifest>

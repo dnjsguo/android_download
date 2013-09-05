@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:orientation="horizontal"
+	android:layout_height="wrap_content">
+	<LinearLayout
+		android:id="@+id/top_layou_topcontainier"
+		android:layout_width="fill_parent"
+		android:gravity="center_horizontal"
+		android:orientation="horizontal"
+		android:layout_height="100dp" />
+</LinearLayout>

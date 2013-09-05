@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:id="@+id/update_layout_"
+	android:gravity="center"
+	android:background="#ffffff"
+	android:layout_gravity="center"
+	>
+	<RelativeLayout
+		android:id="@+id/tab"
+		android:background="#ededed"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+	>
+	<TextView
+		android:id="@+id/title"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="软件更新提醒"
+		android:layout_centerHorizontal="true"
+		android:textColor="#404040"
+		android:textSize="20sp"
+		 android:layout_marginLeft="20dp"
+		android:layout_marginTop="10dp"
+		android:layout_toRightOf="@+id/update_smile">
+	</TextView>
+	   <TextView
+			android:layout_width="wrap_content"
+					android:id="@+id/cancel"
+					android:layout_alignParentRight="true"
+					android:layout_marginRight="20dp"
+					android:layout_centerVertical="true"
+					android:background="@drawable/updatecancel"
+					android:layout_height="wrap_content" />
+	<ImageView
+	    android:id="@+id/line"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/title"
+	    android:layout_marginTop="10dp"
+	    android:background="@drawable/listspiner"/>
+   </RelativeLayout>  
+	<RelativeLayout
+		android:id="@+id/size_version_layout"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/tab"
+		android:layout_margin="15dp">
+		<TextView
+			android:id="@+id/versionname"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="版本"
+			android:textColor="#888787" />
+		<TextView
+			android:id="@+id/size"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_toRightOf="@+id/versionname"
+			android:layout_marginLeft="10dp"
+			android:textColor="#888787" 
+			android:text="大小"/>
+		<ScrollView
+			android:id="@+id/contentlayout"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:layout_below="@+id/versionname"
+			android:layout_above="@+id/end"
+			android:layout_marginBottom="10dp">
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:id="@+id/updeinfo_list_container"
+				android:orientation="vertical"
+				android:layout_height="wrap_content">
+				<!-- 动态添加控件区域 -->
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="test" />
+				<!-- 动态添加控件区域 -->
+			</LinearLayout>
+		</ScrollView>
+		<TextView
+			android:id="@+id/end"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="更多新鲜功能等您来体验..."
+			android:textColor="#888787"
+			android:layout_above="@+id/buttonlayout"
+			android:layout_marginBottom="10dp"></TextView>
+		<RelativeLayout
+			android:id="@+id/buttonlayout"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true">
+			<!-- 功能按钮 -->
+			
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_centerInParent="true"
+					android:id="@+id/updateyuan"
+					android:background="@drawable/updateappdear"
+					android:layout_height="wrap_content" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:text="升级"
+					android:textColor="#ffffff"
+					android:id="@+id/ok"
+					android:layout_centerInParent="true"
+					android:textSize="20dp"
+					android:layout_height="wrap_content" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:text="确定"
+					android:layout_marginRight="20dp"
+					android:id="@+id/confirm"
+					android:textColor="#888787"
+					android:textSize="18sp"
+					android:paddingLeft="15dp"
+					android:paddingRight="15dp"
+					android:layout_centerInParent="true"
+					android:background="@drawable/update_button_bg"
+					android:layout_height="wrap_content"
+					android:visibility="gone" />
+		</RelativeLayout>
+	</RelativeLayout>
+</RelativeLayout>

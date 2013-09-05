@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/alert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="无"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <com.appdear.client.commctrls.ListViewRefresh
+        android:id="@+id/soft_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="#E6E7EB"
+		android:cacheColorHint="#ffffff" 
+		android:dividerHeight="1px"
+        android:drawSelectorOnTop="false"
+        android:fadingEdge="none"
+        android:scrollingCache="false" />
+
+    <Button
+        android:id="@+id/refresh_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="加载数据异常，点击此处刷新列表"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/white">
+	<RelativeLayout
+		android:id="@+id/imageView_layout"
+		android:layout_width="56dp"
+		android:layout_height="45dp"
+		android:layout_marginLeft="7dp"
+		android:layout_marginTop="7dp"
+		android:layout_marginBottom="7dp"
+		android:layout_centerVertical="true">
+		<com.appdear.client.commctrls.AsynLoadImageView
+			android:id="@+id/imageView"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_centerInParent="true"
+			android:src="@drawable/soft_lsit_icon_default" />
+	</RelativeLayout>
+	<TextView
+		android:id="@+id/title_s"
+		android:layout_marginTop="8dp"
+		android:layout_marginLeft="7dp"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/imageView_layout"
+		android:textSize="@dimen/tittle_text_size"
+		android:ellipsize="marquee"
+		android:marqueeRepeatLimit="marquee_forever"
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		android:textColor="@color/text_desc_color_common2"
+		android:singleLine="true"
+		android:layout_toLeftOf="@+id/size_s" />
+	<RatingBar
+			android:id="@+id/star_s"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			style="@style/greenRatingBar"
+			android:layout_marginTop="5dp"
+			android:layout_marginLeft="7dp"
+			android:layout_below="@+id/title_s"
+			android:layout_toRightOf="@+id/imageView_layout"
+			android:isIndicator="true">
+		</RatingBar>
+	<TextView
+		android:id="@+id/size_s"
+		android:layout_marginTop="12dp"
+		android:layout_marginRight="15dp"
+		android:layout_alignParentRight="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/title"
+		android:textSize="13sp"
+		android:textColor="@color/text_desc_color_common2"
+		android:singleLine="true"
+		android:text="大小" />
+	<TextView
+		android:text="免费"
+		android:layout_marginTop="5dp"
+		android:layout_marginRight="15dp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:layout_below="@+id/size_s"
+		android:textStyle="bold"
+		android:textSize="14sp"
+		android:textColor="@color/download_btn_text_color" />
+</RelativeLayout>

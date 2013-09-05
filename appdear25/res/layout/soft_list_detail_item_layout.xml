@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:orientation="horizontal"
+	android:layout_height="wrap_content"
+	android:background="@color/white">
+	<!--左侧 -->
+	<LinearLayout
+		android:layout_width="56dp"
+		android:layout_height="56dp"
+		android:layout_marginLeft="8dp"
+		android:layout_gravity="center_vertical">
+		<com.appdear.client.commctrls.AsynLoadImageView
+			android:id="@+id/soft_list_itemImage"
+			android:src="@drawable/soft_lsit_icon_default"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_gravity="center" />
+	</LinearLayout>
+	<!-- 中间 -->
+	<LinearLayout
+		android:id="@+id/linearLayout1"
+		android:layout_width="wrap_content"
+		android:orientation="vertical"
+		android:layout_height="85dp"
+		android:layout_marginLeft="10dp"
+		android:minWidth="100dp">
+		<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:textColor="@color/black"
+			android:textSize="20sp"
+			android:paddingTop="12dp"
+			android:id="@+id/soft_list_itemTvSoftName"
+			android:text=""></TextView>
+		<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:textColor="#666666"
+			android:textSize="15sp"
+			android:id="@+id/soft_list_itemTvSoftTip"
+			android:text=""></TextView>
+		<ImageView
+			android:id="@+id/soft_list_itemRank"
+			android:layout_width="fill_parent"
+			android:paddingTop="10dp"
+			android:paddingBottom="9dp"
+			android:layout_height="wrap_content" />
+	</LinearLayout>
+	<!-- 右部分 -->
+	<LinearLayout
+		android:layout_height="fill_parent"
+		android:orientation="horizontal"
+		android:layout_width="wrap_content"
+		android:layout_gravity="right">
+		<TextView
+			android:layout_width="wrap_content"
+			android:maxWidth="85dp"
+			android:id="@+id/soft_fee_tag"
+			android:layout_weight="2"
+			android:text=""
+			android:layout_gravity="center_vertical"
+			android:layout_height="wrap_content"
+			android:textColor="@color/black"
+			android:textSize="20sp" />
+		<ImageView
+			android:layout_weight="2"
+			android:src="@drawable/soft_list_go_arrow"
+			android:layout_width="wrap_content"
+			android:layout_gravity="center_vertical"
+			android:paddingRight="25dp"
+			android:id="@+id/soft_list_go"
+			android:layout_height="wrap_content"></ImageView>
+	</LinearLayout>
+</LinearLayout>

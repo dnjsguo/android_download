@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/soft_list_bg" 
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/download_list_item"
+        android:layout_width="fill_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/bg_item_state"
+        >
+
+        <RelativeLayout
+            android:id="@+id/imageviewLayout"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical" >
+
+            <com.appdear.client.commctrls.AsynLoadImageView
+                android:id="@+id/imageView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/soft_lsit_icon_default" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/button_left"
+            android:layout_toRightOf="@+id/imageviewLayout"
+            android:ellipsize="none"
+            android:maxLength="8"
+            android:singleLine="true"
+            android:textColor="@color/soft_list_item_tile_color"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/button_left"
+            android:layout_toRightOf="@+id/imageviewLayout"
+            android:textColor="@color/soft_list_item_desc_color"
+            android:textSize="12dp" />
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:button="@drawable/radiobuttonselect" />
+
+        <TextView
+            android:id="@+id/installedTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="已安装"
+            android:textColor="@color/soft_list_item_desc_color"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical" 
+	android:id="@+id/layoutparent">
+
+	<RelativeLayout
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:id="@+id/layout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="20dp"
+	    android:layout_centerVertical="true"
+	    android:visibility="invisible" >
+
+		<TextView
+			android:id="@+id/ordertitle"
+			android:layout_marginLeft="20dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true"
+			android:visibility="invisible"
+			android:textSize="18sp"
+			android:gravity="center"
+			android:textStyle="bold"
+			android:textColor="@color/soft_list_item_desc_color" />
+	</RelativeLayout>
+	<RelativeLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:id="@+id/layout1"
+		android:background="@drawable/soft_list_bg"
+		android:layout_margin="5dp">
+		 <FrameLayout
+            android:id="@+id/imagelayout"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+          >
+           <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/yuan1" />
+		<ImageView
+			android:id="@+id/imageView"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_centerVertical="true"
+			android:src="@drawable/soft_lsit_icon_default"
+		/>
+		<ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/yuan" />
+		</FrameLayout>
+		<RelativeLayout
+		    android:id="@+id/content_layout"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_toRightOf="@+id/imagelayout"
+		    android:layout_centerVertical="true">
+			<TextView
+				android:id="@+id/title"
+				android:layout_marginTop="5dp"
+				android:layout_marginLeft="8dp"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_toRightOf="@+id/imagelayout"
+				android:textSize="@dimen/tittle_text_size"
+				android:textColor="@color/soft_list_item_tile_color"
+				android:layout_toLeftOf="@+id/uninstall"
+				android:singleLine="true" />
+			<TextView
+				android:id="@+id/desc"
+				android:layout_marginLeft="8dp"
+				android:layout_marginTop="2dp"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_toRightOf="@+id/imagelayout"
+				android:layout_below="@id/title"
+				android:layout_toLeftOf="@+id/uninstall"
+				android:textSize="@dimen/desc_text_size"
+				android:textColor="@color/soft_list_item_desc_color" />
+			<TextView
+				android:id="@+id/alert"
+				android:layout_alignWithParentIfMissing="true"
+				android:layout_marginLeft="8dp"
+				android:layout_marginTop="2dp"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_toRightOf="@+id/imagelayout"
+				android:layout_toLeftOf="@+id/uninstall"
+				android:textColor="@color/soft_list_item_desc_color"
+				android:textSize="@dimen/desc_text_size"
+				android:layout_below="@+id/desc"
+				android:singleLine="true" />
+			<Button
+				android:id="@+id/uninstall"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="@dimen/btn_text_size"
+				android:textColor="@color/white"
+				android:layout_alignParentRight="true"
+				android:layout_marginRight="5dp"
+				android:layout_centerVertical="true"
+				android:background="@drawable/uninstall"/>
+		</RelativeLayout>
+	</RelativeLayout>
+	<!--  
+	<RelativeLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+	 		android:id="@+id/actionLayout"
+			android:background="@drawable/actionlayoutbg"
+			android:visibility="gone"
+		    android:layout_toRightOf="@+id/imageView"
+		    android:layout_centerVertical="true">
+			<Button
+				android:id="@+id/open_button"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:layout_marginLeft="35dp"
+				android:background="@drawable/download_background_state"
+				android:text="打开"
+				/>
+			<Button
+				android:id="@+id/move_button"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:layout_toRightOf="@+id/open_button"
+				android:layout_marginLeft="20dp"
+				android:background="@drawable/download_background_state"
+				android:text="移动" />
+		</RelativeLayout>
+		-->
+	<RelativeLayout
+        android:id="@+id/shareAndfavLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="63dp"
+        android:layout_marginTop="-5dp"
+        android:background="@null"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/quickaction_slider_background" >
+
+            <LinearLayout
+                android:id="@+id/actionLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/open_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/open_installed_list" />
+
+                <Button
+                    android:id="@+id/move_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                     />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/listview_header" />
+    </RelativeLayout>
+</LinearLayout>

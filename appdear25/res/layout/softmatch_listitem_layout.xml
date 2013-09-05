@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:zxy="http://meiyitianabc.blog.163.com"
+	android:layout_width="fill_parent"
+	android:background="@drawable/soft_list_bg"
+	android:layout_height="wrap_content">
+	<RelativeLayout
+		android:layout_alignParentLeft="true"
+		android:id="@+id/match_listitem_imgContainer"
+		android:layout_marginLeft="14dp"
+		android:layout_width="56dp"
+		android:layout_height="56dp"
+		android:layout_centerVertical="true"
+		android:src="@drawable/soft_lsit_icon_default">
+		<com.appdear.client.commctrls.AsynLoadImageView
+			android:id="@+id/match_image"
+			android:layout_centerInParent="true"
+			zxy:imageUrl="1"
+			android:src="@drawable/soft_lsit_icon_default"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent" />
+	</RelativeLayout>
+	<LinearLayout
+		android:gravity="center_vertical"
+		android:layout_width="wrap_content"
+		android:orientation="horizontal"
+		android:layout_alignParentRight="true"
+		android:id="@+id/match_listitem_right"
+		android:layout_height="69dp"
+		android:paddingLeft="5dp"
+		android:paddingRight="15dip">
+		<ImageView
+			android:src="@drawable/right_button_show"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="4dp" />
+	</LinearLayout>
+	<RelativeLayout
+		android:id="@+id/match_listitem_rigthcontainer"
+		android:layout_width="wrap_content"
+		android:orientation="vertical"
+		android:layout_toRightOf="@id/match_listitem_imgContainer"
+		android:layout_height="69dp"
+		android:paddingLeft="10dp">
+		<TextView
+			android:id="@+id/match_title"
+			android:layout_width="wrap_content"
+			android:layout_centerVertical="true"
+			android:textSize="18sp"
+			android:textStyle="bold"
+			android:layout_height="wrap_content"
+			android:textColor="@color/soft_list_item_tile_color" />
+	</RelativeLayout>
+</RelativeLayout>

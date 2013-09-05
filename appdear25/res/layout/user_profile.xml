@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget21"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <com.appdear.client.commctrls.UesrInfoLayout
+        android:id="@+id/userinfo_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </com.appdear.client.commctrls.UesrInfoLayout>
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/userinfo_top"
+        android:background="@color/white"
+        android:scrollbars="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/widget213"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/widget33"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/widget34"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/userUpdateMessage"
+                    android:textColor="@color/soft_list_item_tile_color"
+                    android:textSize="14sp" >
+                </TextView>
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/tablelayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/widget33"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/grayrounded_half_bg"
+                shrinkColumns="0"
+                android:stretchColumns="1" >
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="1dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="5dp" >
+
+                        <TextView
+                            android:id="@+id/userprofiletx4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_gravity="right"
+                            android:gravity="right|center_vertical"
+                            android:paddingLeft="7.0sp"
+                            android:text="@string/userAccount"
+                            android:textColor="@color/soft_list_item_tile_color"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="5dp" >
+
+                        <com.appdear.client.commctrls.LineEditText
+                            android:id="@+id/userprofile_username"
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dp"
+                            android:background="@null"
+                            android:enabled="false"
+                            android:gravity="left|center_vertical"
+                            android:maxLength="20"
+                            android:singleLine="true"
+                            android:textColor="@null"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="1dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="5dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_gravity="right"
+                            android:gravity="right|center_vertical"
+                            android:paddingLeft="7.0sp"
+                            android:text="@string/userInputYourGender"
+                            android:textColor="@color/soft_list_item_tile_color"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="5dp" >
+
+                        <RelativeLayout
+                            android:id="@+id/gender_click"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" >
+
+                            <AutoCompleteTextView
+                                android:id="@+id/userprofile_gender"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/userprofile_genderType"
+                                android:background="@null"
+                                android:focusable="false"
+                                android:gravity="left|center_vertical"
+                                android:hint="保密"
+                                android:textColor="@null"
+                                android:textSize="16sp" />
+
+                            <ImageButton
+                                android:id="@+id/userprofile_genderType"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/arrow_bottom" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="1dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="5dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_gravity="right"
+                            android:gravity="right|center_vertical"
+                            android:paddingLeft="7.0sp"
+                            android:text="@string/userInputYourJ"
+                            android:textColor="@color/soft_list_item_tile_color"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="5dp" >
+
+                        <com.appdear.client.commctrls.LineEditText
+                            android:id="@+id/userprofile_profession"
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dp"
+                            android:background="@null"
+                            android:gravity="left|center_vertical"
+                            android:hint="请输入..."
+                            android:maxLength="20"
+                            android:singleLine="true"
+                            android:textColor="@null"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="1dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="5dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_gravity="right"
+                            android:gravity="right|center_vertical"
+                            android:paddingLeft="7.0sp"
+                            android:text="@string/userInputYourArea"
+                            android:textColor="@color/soft_list_item_tile_color"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="5dp" >
+
+                        <RelativeLayout
+                            android:id="@+id/area_click"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <!--
+                                 com.appdear.client.commctrls.LineEditText android:id="@+id/userprofile_area" 
+								android:layout_width="fill_parent" android:layout_height="wrap_content" android:background="@null" 
+								android:textColor="@null" android:textSize="16sp" android:hint="北京" android:gravity="left" 
+								android:enabled="false" android:maxLength="30" android:layout_toLeftOf="@+id/userprofile_areaType" 
+								/> <ImageButton android:id="@+id/userprofile_areaType" android:background="@drawable/userinfo_select" 
+								android:layout_width="wrap_content" android:layout_height="wrap_content" 
+								android:layout_alignParentRight="true" /
+                            -->
+
+                            <com.appdear.client.commctrls.LineEditText
+                                android:id="@+id/userprofile_area"
+                                android:layout_width="fill_parent"
+                                android:layout_height="50dp"
+                                android:background="@null"
+                                android:gravity="left|center_vertical"
+                                android:hint="请输入..."
+                                android:maxLength="10"
+                                android:singleLine="true"
+                                android:textColor="@null"
+                                android:textSize="16sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="5dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_gravity="right"
+                            android:gravity="right|center_vertical"
+                            android:paddingLeft="7.0sp"
+                            android:text="@string/email"
+                            android:textColor="@color/soft_list_item_tile_color"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="5dp" >
+
+                        <com.appdear.client.commctrls.LineEditText
+                            android:id="@+id/userprofile_email"
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dp"
+                            android:background="@null"
+                            android:gravity="left|center_vertical"
+                            android:hint="请输入..."
+                            android:maxLength="30"
+                            android:singleLine="true"
+                            android:textColor="@null"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="1dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="5dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_gravity="right"
+                            android:gravity="right|center_vertical"
+                            android:paddingLeft="7.0sp"
+                            android:text="@string/userInputYourPhone"
+                            android:textColor="@color/soft_list_item_tile_color"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="5dp" >
+
+                        <RelativeLayout
+                            android:id="@+id/widget1234"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <com.appdear.client.commctrls.LineEditText
+                                android:id="@+id/userprofile_phone"
+                                android:layout_width="fill_parent"
+                                android:layout_height="50dp"
+                                android:layout_toLeftOf="@+id/userprofile_phoneType"
+                                android:background="@null"
+                                android:enabled="false"
+                                android:focusable="false"
+                                android:gravity="left|center_vertical"
+                                android:hint=""
+                                android:maxLength="11"
+                                android:phoneNumber="true"
+                                android:singleLine="true"
+                                android:textColor="@null"
+                                android:textSize="16sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="5dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_gravity="right"
+                            android:gravity="right|center_vertical"
+                            android:paddingLeft="7.0sp"
+                            android:text="@string/userInputYourQQ"
+                            android:textColor="@color/soft_list_item_tile_color"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:background="@color/white"
+                        android:gravity="left"
+                        android:orientation="vertical"
+                        android:padding="5dp" >
+
+                        <com.appdear.client.commctrls.LineEditText
+                            android:id="@+id/userprofile_qq"
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dp"
+                            android:background="@null"
+                            android:gravity="left|center_vertical"
+                            android:hint="请输入..."
+                            android:maxLength="20"
+                            android:singleLine="true"
+                            android:textColor="@null"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="1dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="5dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_gravity="right"
+                            android:gravity="right|center_vertical"
+                            android:paddingLeft="7.0sp"
+                            android:text="@string/userInputYourDesc"
+                            android:textColor="@color/soft_list_item_tile_color"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="1dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="5dp" >
+
+                        <com.appdear.client.commctrls.LineEditText
+                            android:id="@+id/userprofile_desc"
+                            android:layout_width="130dp"
+                            android:layout_height="50dp"
+                            android:background="@null"
+                            android:gravity="left|center_vertical"
+                            android:hint="请输入100字以内"
+                            android:maxLength="100"
+                            android:maxLines="2"
+                            android:minLines="2"
+                            android:textColor="@null"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </TableRow>
+            </TableLayout>
+
+            <RelativeLayout
+                android:id="@+id/loginbottom"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/tablelayout"
+                android:layout_weight="2" >
+
+                <RelativeLayout
+                    android:id="@+id/click_button_update"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/common_button_blue"
+                    android:clickable="true" >
+
+                    <TextView
+                        android:id="@+id/userprofile_update"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/userUpdate"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

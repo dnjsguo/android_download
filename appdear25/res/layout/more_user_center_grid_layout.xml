@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+	<!-- Header -->
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+		android:id="@+id/top"
+		android:layout_alignParentTop="true"
+		android:orientation="vertical"
+		android:background="@color/white">
+		<!-- content -->
+		<com.appdear.client.commctrls.UesrInfoLayout
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:id="@+id/userinfo_top"></com.appdear.client.commctrls.UesrInfoLayout>
+		<!-- nine patch -->
+
+	</LinearLayout>
+	<!-- nine patch -->
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_alignParentBottom="true"
+		android:layout_marginTop="0dp"
+		android:layout_below="@+id/top"
+		android:layout_above="@+id/bottomlist"
+		android:background="@color/white"
+		android:layout_height="wrap_content">
+		<!-- content -->
+		<com.appdear.client.commctrls.ListViewRefresh
+			android:id="@+id/soft_list"
+			android:layout_height="fill_parent"
+			android:layout_width="fill_parent"
+			android:divider="#E6E7EB"
+        android:dividerHeight="1px"
+			android:drawSelectorOnTop="false"
+			android:scrollingCache="false"
+			android:fadingEdge="none" />
+	</RelativeLayout>
+</RelativeLayout>

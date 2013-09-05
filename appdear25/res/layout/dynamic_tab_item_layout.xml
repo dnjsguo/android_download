@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- item -->
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="158dp"
+	android:layout_height="fill_parent"
+	android:layout_gravity="bottom"
+	android:minWidth="55dp"
+	android:maxWidth="158dp"
+	android:layout_marginRight="5dp"
+	android:layout_marginTop="2dp"
+	android:layout_weight="1">
+	<RelativeLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom"
+		android:minWidth="55dp"
+		android:minHeight="37dp"
+		android:maxWidth="150dp">
+	</RelativeLayout>
+	<TextView
+		android:id="@+id/tabbar_tv_title"
+		android:layout_width="wrap_content"
+		android:layout_gravity="center"
+		android:layout_centerVertical="true"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:textSize="18sp" />
+</FrameLayout>

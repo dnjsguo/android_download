@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	<string name="hello">Hello World, MainActivity!</string>
+	<string name="app_name">&#160;应用下载&#160;</string>
+	<string name="rootContainer">rootContainer</string>
+	<string name="fistItem">fistItem</string>
+	<string name="secondItem">secondItem</string>
+	<string name="thirdItem">thirdItem</string>
+	<string name="tabListview1">tabListview1</string>
+	<string name="tabListview2">tabListview2</string>
+	<string name="tabListview3">tabListview3</string>
+	<string name="splash_tv_welcome">精彩资源 尽在爱皮</string>
+	<string name="splash_tv_siteurl">www.appdear.com</string>
+	<string name="soft_category">软件类别</string>
+	<string name="software_info"></string>
+	<string name="userNameLoginHint">用户名</string>
+	<string name="userPwdLoginHint">密 码</string>
+	<string name="userAccount">账号:</string>
+	<string name="userPwd">密码:</string>
+	<string name="user_botm">还没有账户？立即创建，只需30秒。</string>
+	<string name="userRePwd">确认密码:</string>
+	<string name="userForgetPwd">忘记密码？请点击</string>
+	<string name="userLogin">登录</string>
+	<string name="cancel">取消</string>
+	<string name="userReg">注册</string>
+	<string name="user_login_tip">进入会员中心，更多折扣等着您！</string>
+	<string name="email">邮箱:</string>
+	<string name="userName">用户名</string>
+	<string name="userNameTip">用户名 6-25个字符（字母开头，字母或数字结尾）</string>
+	<string name="userPwdTip">密码(6-16个字符之间)</string>
+	<string name="userEmailTip">请输入正确的邮箱地址</string>
+	<string name="userPwdReTip">确认密码</string>
+	<string name="userAgreeProtocol">
+		<u>爱皮应用下载服务条款</u>
+	</string>
+	<string name="permission_underline">
+		<u>查看软件权限</u>
+	</string>
+	<string name="userreadAgreeProtocol">查看</string>
+	<string name="userInputYourName">输入您的用户名</string>
+	<string name="usercenter_complete_info"></string>
+
+	<string name="userNameProfile">用户名:</string>
+	<string name="userInputYourAge">年龄:</string>
+	<string name="userInputYourGender">性别:</string>
+	<string name="userInputYourJ">昵称:</string>
+	<string name="userInputYourArea">地区:</string>
+	<string name="userInputYourQQ">QQ:</string>
+	<string name="userInputYourDesc">个人描述:</string>
+	<string name="userInputYourPhone">电话号码:</string>
+	<string name="userUpdateMessage"></string>
+	<string name="userPhoneCheck">未验证</string>
+	<string name="userUpdate">提交</string>
+	<string name="userCannel">取消</string>
+
+
+	<string name="for_point">如何获得积分</string>
+	<string name="for_account">如何充值</string>
+	<string name="for_sms">关于手机支付</string>
+	<string name="for_card">如关于储值卡支付</string>
+
+	<!-- 添加字符串 2011 - 09 - 14 首页新鲜玩意儿 -->
+	<string name="xinxian_key_share">共同分享</string>
+	<string name="xinxian_value_share">和QQ好友一起分享最新最给力的...</string>
+	<string name="xinxian_key_appCustomMake">应用定制</string>
+	<string name="xinxian_value_appCustomMake">没有想要的应用？来定制自己专属的...</string>
+	<string name="xinxian_key_phoneShop">手机店面</string>
+	<string name="xinxian_value_phoneShop">您购机时的手机卖场，沟通咨询随时</string>
+
+	<!-- Security Permissions strings -->
+	<!-- The default permission group for any permissions that have not explicitly 
+		set a group. -->
+	<string name="default_permission_group">Default</string>
+	<!-- Do not translate. -->
+	<string name="permissions_format">
+		<xliff:g id="perm_line1">%1$s</xliff:g>
+		<xliff:g id="perm_line2">%2$s</xliff:g>
+	</string>
+	<!-- Shown for an application when it doesn't require any permission grants. -->
+	<string name="no_permissions">No permissions required</string>
+	<!-- When installing an application, the less-dangerous permissions are 
+		hidden. If the user showed those, this is the text to hide them again. -->
+	<string name="perms_hide">
+		<b>Hide</b>
+	</string>
+	<!-- When installing an application, the less-dangerous permissions are 
+		hidden. This is the text to show those. -->
+	<string name="perms_show_all">
+		<b>Show all</b>
+	</string>
+	<!-- 登入界面字体加划线 -->
+	<string name="login_user">
+		<u>会员注册 </u>
+	</string>
+	<string name="login_user_02">
+		<u>登录 </u>
+	</string>
+	<string name="nokonwnpswd">
+		<u>忘记密码？ </u>
+	</string>
+	<string name="find">
+		<u>查看</u>
+	</string>
+	<string name="lookat">
+		<u>爱皮应用下载服务条款</u>
+	</string>
+	
+	<string name="tab_return">
+		<u>返回</u>
+	</string>
+	<string name="baoxiu">
+ 	\n1、移动电话机主机三包有效期为1年。附件的三包有效期为：电池6个月，外接有线耳机3个月，充电器、移动终端卡、数据接口卡为1年。三包有效期自开具发票之日起计算，扣除因修理占用、无零配件待修延误的时间。\n 2、在三包有效期内，消费者依照本规定享受修理、更换、退货的权利。应当凭发货票和三包凭证办理。\n 3、在三包有效期内，移动电话机主机出现质量问题的，由修理者免费修理。修理者应当保证修理后的移动电话机商品能够正常使用30日以上。\n 4、自售出之日起7日内，移动电话机主机出现说明书所列功能失效、屏幕无显示、错字、漏划、无法开机、不能正常登录或通信、无振铃、拨号错误、非正常关机、SIM卡接触不良、按键控制失效、无声响、单向无声或音量不正常、因结构或材料因素造成的外壳裂损等性能故障的，消费者可以选择退货、换货或者修理。消费者要求换货时，销售者应当免费为消费者更换同型号同规格的移动电话机。消费者要求退货时，销售者应当负责免费为消费者退货，并按发货票价格一次退清货款。\n 5、自售出之日起第8日至第15日内，移动电话机出现上列性能故障的，消费者可以选择换货或者修理。消费者要求换货时，销售者应当免费为消费者更换同型号同规格的移动电话机主机。\n 6、在三包有效期内，电池、充电器、移动终端卡、外接有线耳机、数据接口卡等移动电话机附件出现性能故障的，销售者。</string>
+</resources>

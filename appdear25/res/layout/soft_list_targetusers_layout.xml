@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/top_text_hint"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="您属于？？？"
+        android:textColor="@color/soft_list_item_tile_color"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#d5d9ce" >
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="无"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <com.appdear.client.commctrls.ListViewRefresh
+            android:id="@+id/soft_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+           android:divider="#E6E7EB"
+            android:dividerHeight="1px"
+            android:drawSelectorOnTop="false"
+            android:fadingEdge="none"
+            android:scrollingCache="false" />
+
+        <Button
+            android:id="@+id/refresh_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="加载数据异常，点击此处刷新列表"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

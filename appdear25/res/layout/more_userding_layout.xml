@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:id="@+id/top"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:background="@drawable/nav_bg_1">
+		<ImageView android:src="@drawable/dashed_line" 
+		    android:layout_alignParentTop="true"
+			android:layout_width="fill_parent" 
+			android:layout_height="3dip"
+			android:layout_marginTop="2dp" android:visibility="gone"> 
+	
+	  	</ImageView>
+	  	<ImageButton 
+		    android:id="@+id/setting_back"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_marginLeft="7dp"
+		    android:src="@drawable/tab_img_return"
+		    android:layout_centerVertical="true"
+		    android:background="#0000"
+		/>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="应用定制"
+			android:textColor="@color/tabtextcolor"
+			android:layout_centerInParent="true"
+			android:textSize="18dp"
+			android:layout_marginTop="5dp" />
+	</RelativeLayout>
+	<LinearLayout
+		android:layout_below="@+id/top"
+		android:layout_width="fill_parent"
+		android:layout_alignParentBottom="true"
+		android:paddingLeft="5dp"
+		android:paddingRight="5dp"
+		android:orientation="vertical"
+		android:layout_height="fill_parent"
+		android:background="@color/white">
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="45dp"
+			android:layout_weight="1"
+			android:id="@+id/top1"
+			android:gravity="center"
+			android:orientation="vertical">
+			<LinearLayout
+				android:id="@+id/layout_top"
+				android:layout_width="fill_parent"
+				android:orientation="horizontal"
+				android:layout_height="wrap_content">
+				<RelativeLayout
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content">
+					<TextView
+						android:layout_width="wrap_content"
+						android:gravity="center"
+						style="@style/shadow"
+						android:textSize="16sp"
+						android:id="@+id/cata"
+						android:layout_height="wrap_content"
+						android:textColor="@color/soft_list_item_tile_color"
+						android:text="类别"
+						android:layout_centerVertical="true" />
+					<AutoCompleteTextView
+						android:id="@+id/auto_complete"
+						android:layout_width="fill_parent"
+						android:layout_height="40dp"
+						android:layout_toRightOf="@+id/cata"
+						android:layout_marginLeft="5dp"
+						android:layout_centerVertical="true"
+						android:focusable="false"
+						android:text="社交聊天"
+						android:textSize="16sp"
+						android:background="@drawable/edit_login" />
+					<ImageView
+						android:src="@drawable/arrow_bottom"
+						android:id="@+id/button"
+						android:layout_alignParentRight="true"
+						android:layout_marginRight="10dp"
+						android:layout_centerVertical="true"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" />
+				</RelativeLayout>
+			</LinearLayout>
+		</LinearLayout>
+		<LinearLayout
+			android:layout_gravity="top"
+			android:layout_width="fill_parent"
+			android:orientation="vertical"
+			android:layout_below="@+id/top1"
+			android:layout_marginTop="1dp"
+			android:layout_weight="9"
+			android:layout_height="wrap_content">
+			<EditText
+				android:id="@+id/more_feedback_et_content"
+				android:layout_width="fill_parent"
+				android:hint="输入应用描述..."
+				android:layout_height="wrap_content"
+				android:minLines="3"
+				android:maxLines="5"
+				android:maxLength="100"
+				android:gravity="top"
+				android:background="@drawable/edit_login" />
+			<Button
+				android:layout_marginTop="10dp"
+				android:id="@+id/more_feedback_submit"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="提交"
+				android:textColor="#FFFFFF"
+				android:textSize="18sp"
+				android:paddingLeft="25dp"
+				android:paddingRight="25dp"
+				android:layout_gravity="right"
+				android:background="@drawable/download_button_item_state" />
+		</LinearLayout>
+	</LinearLayout>
+</RelativeLayout>

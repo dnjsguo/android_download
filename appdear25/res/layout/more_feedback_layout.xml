@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	>
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_alignParentBottom="true"
+		android:orientation="vertical"
+		android:background="@color/white"
+		android:layout_height="fill_parent">
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:id="@+id/top1">
+			<RelativeLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/top"
+				android:background="@drawable/nav_bg_1">
+				<ImageView 
+					android:src="@drawable/dashed_line" 
+		   			android:layout_alignParentTop="true"
+		   			android:layout_marginTop="3dp"
+					android:layout_width="fill_parent" 
+					android:layout_height="4dp" android:visibility="gone"> 
+			 	</ImageView>
+			 	<ImageButton
+	                android:id="@+id/btn_return"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_centerVertical="true"
+	                android:layout_marginLeft="14dp"
+	                android:background="@drawable/tab_img_return" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:textSize="20sp"
+					android:layout_height="wrap_content"
+					android:textColor="@color/tabtextcolor"
+					android:layout_marginLeft="5dp"
+					android:layout_centerInParent="true"
+					android:text="意见反馈" />
+			</RelativeLayout>
+			<LinearLayout
+				android:id="@+id/layout_top"
+				android:layout_width="fill_parent"
+				android:orientation="horizontal"
+				android:layout_height="wrap_content">
+				<RelativeLayout
+					android:layout_width="fill_parent"
+					android:layout_height="60dp"
+				>
+					<TextView
+						android:layout_width="wrap_content"
+						android:gravity="center"
+						style="@style/shadow"
+						android:textSize="16sp"
+						android:id="@+id/cata"
+						android:layout_height="fill_parent"
+						android:textColor="@color/soft_list_item_tile_color"
+						android:text="类别"
+						android:layout_centerVertical="true"
+						android:layout_marginLeft="5dp" />
+					<AutoCompleteTextView
+						android:id="@+id/auto_complete"
+						android:layout_width="fill_parent"
+						android:layout_height="50dp"
+						android:layout_toRightOf="@+id/cata"
+						android:layout_marginLeft="5dp"
+						android:layout_marginRight="5dp"
+						android:layout_centerVertical="true"
+						android:focusable="false"
+						android:text="功能问题"
+						android:textSize="16sp"
+						android:background="@drawable/edit_login" />
+					<ImageView
+						android:src="@drawable/arrow_bottom"
+						android:id="@+id/button"
+						android:layout_alignParentRight="true"
+						android:layout_marginRight="20dp"
+						android:layout_centerVertical="true"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" />
+				</RelativeLayout>
+			</LinearLayout>
+		</LinearLayout>
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:orientation="vertical"
+			android:layout_below="@+id/top1"
+			android:id="@+id/layout_2"
+			android:gravity="top"
+			android:layout_height="wrap_content"
+			android:layout_weight="5"
+			>
+			<EditText
+				android:id="@+id/more_feedback_et_content"
+				android:layout_width="fill_parent"
+				android:hint="输入反馈的内容"
+				android:layout_height="wrap_content"
+				android:minLines="3"
+				android:maxLines="5"
+				android:maxLength="70"
+				android:gravity="top"
+				android:layout_marginTop="3dp"
+				android:layout_marginLeft="5dp"
+				android:layout_marginRight="5dp"
+				android:background="@drawable/edit_login" />
+			<TextView
+				android:layout_marginTop="10dp"
+				android:id="@+id/more_feedback_submit"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="提交"
+				android:textColor="#FFFFFF"
+				android:textSize="18sp"
+				android:paddingLeft="25dp"
+				android:paddingRight="25dp"
+				android:layout_gravity="right"
+				android:layout_marginRight="5dp"
+				android:background="@drawable/download_button_item_state" />
+		</LinearLayout>
+	</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:paddingTop="6dp"
+	android:paddingBottom="6dp"
+	android:background="@drawable/bg_item_state">
+	<FrameLayout android:layout_alignParentLeft="true"
+		android:layout_marginLeft="20dp"
+		android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:id="@+id/ff"
+		android:layout_centerVertical="true">
+	  <ImageView
+		android:id="@+id/r_image"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_gravity="center"
+		android:src="@drawable/search_1" />
+	   <TextView
+		android:id="@+id/text1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textSize="14sp"
+		android:textColor="@color/white"
+		android:text="1"
+		android:layout_gravity="center"
+		 />
+	</FrameLayout>
+	<TextView
+		android:id="@+id/keyword"
+		android:layout_toRightOf="@+id/ff"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:layout_marginLeft="20dp"
+		android:textStyle="bold"
+		android:textSize="20sp"
+		android:textColor="@color/soft_list_item_tile_color"
+		style="@style/shadow" />
+	<ImageView
+		android:id="@+id/keyword_image"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:layout_marginRight="30dp"
+		android:layout_centerVertical="true"
+		android:src="@null" />
+</RelativeLayout>

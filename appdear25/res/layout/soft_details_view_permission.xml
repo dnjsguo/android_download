@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<!-- appinfo -->
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_alignParentTop="true"
+		android:id="@+id/soft_permission_header"
+		android:layout_height="wrap_content">
+		<include
+			android:id="@+id/header"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			layout="@layout/software_detailinfo_layout"></include>
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_below="@id/soft_permission_header"
+		android:background="@drawable/soft_list_item_unselected_bg"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="vertical">
+		<ScrollView
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent">
+			<!-- Permissions section -->
+			<LinearLayout
+				android:id="@+id/permissions_section"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:orientation="vertical">
+				<TextView
+					android:text="应用程序需要使用以下权限"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:paddingTop="6dip"
+					android:textColor="#000000"
+					android:paddingLeft="6dip"
+					android:background="@color/transparent"
+					android:paddingBottom="6dip"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" />
+				<LinearLayout
+					android:id="@+id/security_settings_list"
+					android:layout_width="fill_parent"
+					android:layout_height="fill_parent"
+					android:orientation="vertical" />
+			</LinearLayout>
+		</ScrollView>
+	</LinearLayout>
+</RelativeLayout>

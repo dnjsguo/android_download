@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<array name="yijianCategory">
+		<item>功能问题</item>
+		<item>优化问题</item>
+		<item>其他问题</item>
+	</array>
+	<array name="select_favorite_items">
+		<item>删除收藏</item>
+		<item>查看信息</item>
+		<item>下载软件</item>
+	</array>
+	<array name="select_favorite_items_update">
+		<item>删除收藏</item>
+		<item>查看信息</item>
+		<item>升级软件</item>
+	</array>
+	<array name="select_favorite_items_install">
+		<item>删除收藏</item>
+		<item>查看信息</item>
+		<item>安装软件</item>
+	</array>
+	<array name="select_favorite_items_installed">
+		<item>删除收藏</item>
+		<item>查看信息</item>
+	</array>
+	<string-array name="select_area">
+		<item>北京</item>
+		<item>上海</item>
+		<item>天津</item>
+	</string-array>
+</resources>

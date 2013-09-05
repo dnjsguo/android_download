@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- jdan 2011-07通用列表显示 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget21"
+      android:background="@color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_below="@+id/widget1" >
+
+    <!-- Header -->
+       <LinearLayout
+        android:id="@+id/ll_navigation"
+        android:layout_width="fill_parent"
+        android:layout_height="53dp"
+        android:layout_below="@+id/widget21"
+        android:background="@drawable/nav_bg_1"
+        android:orientation="vertical" >
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="3dip"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/dashed_line" android:visibility="gone">
+        </ImageView>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/layout"
+            android:gravity="center">
+           <ImageButton
+                android:id="@+id/btn_return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:background="@drawable/tab_img_return"
+                android:layout_centerVertical="true" />
+            <TextView
+                android:id="@+id/tv_navigation"
+              	android:paddingLeft="50dp"
+              	android:paddingRight="50dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="云备份"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:textColor="@color/tabtextcolor"
+               	android:ellipsize="marquee"
+               	android:singleLine="true"
+				android:marqueeRepeatLimit="marquee_forever"
+				android:focusable="true"
+				android:focusableInTouchMode="true"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </LinearLayout>
+    	<LinearLayout
+    	    	 android:layout_below="@+id/ll_navigation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                 android:id="@+id/beifen"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/Button01"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/txlbf_state"
+                    android:drawableLeft="@drawable/bf"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="19dp"
+                    android:text="  通讯录备份"
+                    android:gravity="left"
+                    android:textColor="#777777"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btn_smsback"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/txlbg3_state"
+                    android:drawableLeft="@drawable/smsback"
+                    android:paddingLeft="19dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:gravity="left"
+                    android:text="  短信备份"
+                    android:textColor="#777777"
+                    android:textSize="18sp" />
+                 <Button
+                    android:id="@+id/installed_backup"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/txlhy_state"
+                    android:drawableLeft="@drawable/installed_backup"
+                    android:paddingLeft="19dp"
+                    android:paddingTop="10dp"
+                    android:gravity="left"
+                    android:text="  软件列表备份"
+                    android:textColor="#777777"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+             <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                 android:id="@+id/huanyuan"
+                  android:layout_below="@+id/ll_navigation"
+                 android:visibility="gone"
+                android:padding="10dp" >
+
+                <Button
+                    android:id="@+id/Button02"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/txlbf_state"
+                    android:drawableLeft="@drawable/hy"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="19dp"
+                    android:text="  通讯录还原"
+                    android:gravity="left"
+                   android:textColor="#777777"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btn_smsrestore"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/txlbg3_state"
+                    android:drawableLeft="@drawable/smsrestore"
+                    android:paddingLeft="19dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:gravity="left"
+                    android:text="  短信还原"
+                    android:textColor="#777777"
+                    android:textSize="18sp" />
+                 <Button
+                    android:id="@+id/installed_restore"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/txlhy_state"
+                    android:drawableLeft="@drawable/installed_restore"
+                    android:paddingLeft="19dp"
+                    android:paddingTop="10dp"
+                    android:gravity="left"
+                    android:text="  软件列表还原"
+                    android:textColor="#777777"
+                    android:textSize="18sp" />
+            </LinearLayout>
+    <!-- 底部功能菜单栏 -->
+</RelativeLayout>

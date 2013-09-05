@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<dimen name="hint_y_offset">64dip</dimen>
+	<dimen name="appwidget_width">151dip</dimen>
+	<dimen name="appwidget_height">196dip</dimen>
+	<dimen name="camera_width">360dip</dimen>
+	<dimen name="camera_height">480dip</dimen>
+	<dimen name="camera_photo_preview_grid">360dip</dimen>
+	<dimen name="camera_photo_preview_grid_item_w">112dip</dimen>
+	<dimen name="camera_photo_preview_grid_item_h">150dip</dimen>
+	<dimen name="camera_photo_preview_grid_item_v_space">7.5dip</dimen>
+	<dimen name="camera_photo_preview_grid_item_h_space">5dip</dimen>
+	<dimen name="camera_control_button_gap">4dip</dimen>
+	<!-- oyys分享 -->
+	<dimen name="bottom_tab_padding_drawable">2.0dip</dimen>
+	<dimen name="bottom_tab_padding_up">5.0dip</dimen>
+	<dimen name="bottom_tab_font_size">15.0dip</dimen>
+	<!-- 结束 -->
+   
+	<!-- 文字大小（标题、描述、按键文字） -->
+	<dimen name="list_tittle_text_size">16sp</dimen>
+	<dimen name="tittle_text_size">18sp</dimen>
+	<dimen name="desc_text_size">13sp</dimen>
+	<dimen name="process_text_size">14sp</dimen>
+	<dimen name="size_text_size">12sp</dimen>
+	<dimen name="btn_text_size">13sp</dimen>
+	<dimen name="btn_text_size_large">18sp</dimen>
+
+	<!-- 通用边框间隔（标题、内容） -->
+	<dimen name="marging_left_common_tittle">18.0dip</dimen>
+	<dimen name="marging_right_common_tittle">18.0dip</dimen>
+	<dimen name="marging_top_common_tittle">8.0dip</dimen>
+
+	<dimen name="marging_left_common_content">18.0dip</dimen>
+	<dimen name="marging_right_common_content">18.0dip</dimen>
+	<dimen name="marging_top_common_content">8.0dip</dimen>
+	
+	<!-- 万花筒模块 -->
+	<dimen name="match_tv_marging_top">15dip</dimen>
+	<dimen name="match_tv_marging_left">15dip</dimen>
+	<dimen name="match_tv_size_big">18sp</dimen>
+</resources>

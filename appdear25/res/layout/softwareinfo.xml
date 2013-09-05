@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/softwareinfo_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true" >
+
+        <com.appdear.client.commctrls.MyScollViewDetail
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/scolldetail"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <RelativeLayout
+                    android:id="@+id/top"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                   
+                    android:background="@color/ad_bg" >
+
+                    <com.appdear.client.commctrls.MyScollView
+                        android:id="@+id/picscroll"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:scrollbars="none" >
+
+                        <com.appdear.client.commctrls.ViewPicLayout
+                            android:id="@+id/viewpiclayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </com.appdear.client.commctrls.MyScollView>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:paddingTop="5dp"
+                    android:id="@+id/software_content_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@+id/top"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/software_content_list_upload_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="4dp"
+                        android:text="@string/software_info"
+                        android:textColor="@color/soft_content_text_color"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/software_content_list_download_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="@string/software_info"
+                        android:textColor="@color/soft_content_text_color"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/summy_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                      android:layout_below="@+id/software_content_top"
+                    android:layout_alignLeft="@+id/picscroll"
+                    
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="5dp"
+                    android:text="软件介绍："
+                    android:textColor="@color/soft_list_item_tile_color"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/software_summy"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_alignLeft="@+id/picscroll"
+                    android:layout_below="@+id/summy_title"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="25dp"
+                    android:lineSpacingExtra="2dp"
+                    android:paddingBottom="20dp"
+                    android:textColor="@color/soft_list_item_desc_color"
+                    android:textSize="14sp" />
+
+                <!--ImageView
+                    android:id="@+id/leftImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="3dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="100dp"
+                    android:src="@drawable/direction_right" />
+
+                <ImageView
+                    android:id="@+id/rightImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="100dp"
+                    android:src="@drawable/direction_left"
+                    android:visibility="gone" /-->
+            </RelativeLayout>
+        </com.appdear.client.commctrls.MyScollViewDetail>
+    </FrameLayout>
+
+</RelativeLayout>

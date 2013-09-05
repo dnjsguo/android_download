@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="10dp"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="软件管理"
+                    android:textColor="#777777"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <Button
+                    android:id="@+id/Button01"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/txlbf_state"
+                    android:drawableLeft="@drawable/update_icon"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="19dp"
+                    android:paddingRight="130dp"
+                    android:text="  可升级软件"
+                    android:gravity="left"
+                    android:textColor="#777777"
+                    android:textSize="18sp" />
+                <Button
+                    android:id="@+id/Button02"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/txlbg3_state"
+                    android:drawableLeft="@drawable/install_icon"
+                    android:paddingLeft="19dp"
+                    android:paddingRight="130dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:gravity="left"
+                    android:text="  可卸载软件"
+                    android:textColor="#777777"
+                    android:textSize="18sp" />
+                 <Button
+                    android:id="@+id/Button03"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/txlhy_state"
+                    android:drawableLeft="@drawable/download"
+                    android:paddingLeft="19dp"
+                    android:paddingRight="130dp"
+                    android:paddingTop="10dp"
+                    android:gravity="left"
+                    android:text="  下载管理"
+                    android:textColor="#777777"
+                    android:textSize="18sp" />
+            </LinearLayout>
+            <!-- <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="存储管理 "
+                    android:textColor="#777777"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <Button
+                    android:id="@+id/btn_process"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/txlbg4_state"
+                    android:drawableLeft="@drawable/process_icon"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="19dp"
+                    android:paddingRight="130dp"
+                    android:paddingTop="10dp"
+                    android:text="  进程管理"
+                     android:gravity="left"
+                    android:textColor="#777777"
+                    android:textSize="18sp" />
+            </LinearLayout> -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="设置 "
+                    android:textColor="#777777"
+                    android:textSize="20sp" />
+            </LinearLayout>        
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <Button
+                    android:id="@+id/seting"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/txlbg4_state"
+                    android:drawableLeft="@drawable/seting_icon"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="19dp"
+                    android:gravity="left"
+                    android:text="  设置图片、下载、更新"
+                    android:textColor="#777777"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+

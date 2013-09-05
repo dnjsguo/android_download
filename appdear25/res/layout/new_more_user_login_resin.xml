@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+ 	android:background="@drawable/user_login_bg"
+	
+	>
+			<!-- 登入界面 -->
+			<RelativeLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="15dp"
+				android:layout_marginLeft="15dp"
+				android:layout_marginRight="15dp"
+				android:background="@drawable/uese_login_in_bg_top03"
+				android:visibility="visible"
+				android:id="@+id/reg_login_in">
+				<EditText
+					android:id="@+id/user_login_in_01"
+					android:background="@drawable/edit_login"
+					android:paddingLeft="5.0dp"
+					android:saveEnabled="true"
+					android:layout_width="fill_parent"
+					android:layout_height="45.0dip"
+					android:layout_marginLeft="25dp"
+					android:layout_marginRight="25dp"
+					android:textSize="15sp"
+					android:singleLine="true"
+					android:layout_marginTop="15dp"
+					android:maxLength="25"
+					android:layout_alignParentTop="true"
+					android:hint="请输入用户名" />
+				<EditText
+					android:id="@+id/user_login_in_02"
+					android:background="@drawable/edit_login"
+					android:layout_below="@+id/user_login_in_01"
+					android:paddingLeft="5dp"
+					android:saveEnabled="true"
+					android:layout_width="fill_parent"
+					android:layout_height="45.0dip"
+					android:layout_marginTop="10dp"
+					android:layout_marginLeft="25dp"
+					android:layout_marginRight="25dp"
+					android:textSize="15.0dip"
+					android:inputType="textPassword"
+					android:maxLength="16"
+					android:hint="请输入密码" />
+				<!-- checkbox -->
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_below="@+id/user_login_in_02"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_alignLeft="@+id/user_login_in_02"
+					android:layout_marginTop="8dp"
+					android:id="@+id/user_login_in_checkbox">
+					<CheckBox
+						android:id="@+id/login_in_checkbox"
+						android:layout_width="25dp"
+						android:layout_height="25dp"
+						android:button="@drawable/radiobuttonselect"
+						android:checked="true"
+						android:gravity="left" />
+					<TextView
+						android:text="下次自动登录"
+						android:layout_width="wrap_content"
+						android:layout_marginLeft="5dp"
+						android:layout_height="wrap_content"
+						android:textColor="@color/black1" />
+				 
+				</LinearLayout>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:clickable="true"
+					android:background="@drawable/login_btn_selector"
+					android:id="@+id/image_login_in_button"
+					android:text="登录"
+					android:textSize="18sp"
+					android:paddingLeft="25dp"
+					android:layout_alignTop="@+id/user_text_login_02"
+					android:layout_marginRight="38dp"
+					android:layout_alignParentRight="true"
+					android:paddingRight="25dp"
+					android:paddingTop="5dp"
+					android:textColor="@color/white" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:clickable="true"
+					android:background="@drawable/regeste_btn_selector"
+					android:textSize="18sp"
+					android:layout_marginTop="10dp"
+					android:layout_below="@+id/user_login_in_checkbox"
+					android:layout_alignParentLeft="true"
+					android:layout_marginLeft="38dp"
+					android:text="注册"
+					android:paddingLeft="25dp"
+					android:paddingRight="25dp"
+					android:textColor="@color/white"
+					android:id="@+id/user_text_login_02" />
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_below="@+id/image_login_in_button"
+					android:layout_width="fill_parent"
+					android:layout_height="2dp">
+				</LinearLayout>
+			</RelativeLayout>
+			 
+            <RelativeLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="280dp"
+ 				android:layout_centerHorizontal="true"
+				android:background="@drawable/user_login_image"
+ 				 >
+	         </RelativeLayout>
+</RelativeLayout>

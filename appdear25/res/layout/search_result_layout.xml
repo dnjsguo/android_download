@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_navigation"
+        android:layout_width="fill_parent"
+        android:layout_height="53dp"
+        android:background="@drawable/nav_bg_1"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="3dip"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/dashed_line"
+            android:visibility="gone" >
+        </ImageView>
+
+        <RelativeLayout
+            android:id="@+id/layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center" >
+
+            <ImageButton
+                android:id="@+id/btn_return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="14dp"
+                android:background="@drawable/tab_img_return" />
+
+            <TextView
+                android:id="@+id/tv_navigation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:singleLine="true"
+                android:textColor="@color/tabtextcolor"
+                android:textSize="18dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/ll_navigation"
+        android:background="#dcdbda" />
+
+    <RelativeLayout
+        android:id="@+id/search_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/linearLayout1"
+        android:background="@color/white" >
+
+        <AutoCompleteTextView
+            android:id="@+id/auto_complete"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@+id/search_button"
+            android:background="@drawable/edit_login"
+            android:completionHint="系统智能匹配结果."
+            android:hint="请输入软件名称"
+            android:paddingLeft="10dp"
+            android:paddingRight="45dp"
+            android:singleLine="true"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/mBtn_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/auto_complete"
+            android:layout_alignTop="@+id/auto_complete"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="9dp"
+            android:layout_toLeftOf="@+id/search_button"
+            android:padding="3dp" />
+
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/search_button_bg1"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+ 	<RelativeLayout
+ 	    android:id="@+id/rl"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/search_edit"
+        android:background="#dcdbda" />
+    <LinearLayout
+        android:id="@+id/search_resultList_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/rl"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/searchres"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:background="#e7ebee" >
+
+            <TextView
+                android:id="@+id/search_result_num"
+                style="@style/shadow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="搜索结果"
+                android:textColor="@color/soft_list_item_tile_color" />
+        </RelativeLayout>
+
+        <com.appdear.client.commctrls.ListViewRefresh
+            android:id="@+id/soft_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="#E6E7EB"
+            android:dividerHeight="1px"
+            android:drawSelectorOnTop="false"
+            android:fadingEdge="none"
+            android:scrollingCache="false" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/refresh_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="加载数据异常，点击此处刷新列表"
+        android:visibility="gone" />
+
+</RelativeLayout>

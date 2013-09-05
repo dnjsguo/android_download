@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical" android:background="@drawable/soft_list_bg"
+	android:id="@+id/linearLayout">
+
+	<RelativeLayout android:id="@+id/handlerfavorite"
+		android:layout_width="fill_parent" android:layout_height="67dp"
+		android:background="@drawable/bg_item_state" android:orientation="horizontal">
+
+		<FrameLayout android:id="@+id/imagelayout"
+			android:layout_width="48dp" android:layout_height="48dp"
+			android:layout_centerVertical="true" android:layout_gravity="center"
+			android:layout_marginLeft="7dp">
+			<ImageView android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:src="@drawable/yuan1" />
+			<com.appdear.client.commctrls.AsynLoadImageView
+				android:id="@+id/imageView" android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:src="@drawable/soft_lsit_icon_default" />
+			<ImageView android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:src="@drawable/yuan" />
+			<TextView android:id="@+id/shoufa" android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:visibility="invisible"
+				android:background="@drawable/shoufa"></TextView>
+
+		</FrameLayout>
+
+		<RelativeLayout android:id="@+id/contentLayout"
+			android:layout_width="wrap_content" android:layout_height="fill_parent"
+			android:layout_marginLeft="3dp" android:layout_toRightOf="@+id/imagelayout"
+			android:orientation="horizontal">
+
+			<RelativeLayout android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:layout_alignParentLeft="true"
+				android:layout_marginLeft="5dp" android:layout_toLeftOf="@+id/sizeAndPriceLayout">
+
+				<TextView android:id="@+id/title" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:layout_marginTop="5dp"
+					android:singleLine="true" android:textColor="@color/soft_list_item_tile_color"
+					android:textSize="18dp" />
+				<RelativeLayout android:id="@+id/xlayout"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_below="@+id/title"  
+					android:layout_marginTop="1dp"
+					android:gravity="center">
+ 
+					<TextView android:id="@+id/price" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:textColor="@color/soft_list_item_desc_color"
+						android:textSize="@dimen/size_text_size"  />
+
+					<RatingBar android:id="@+id/star"
+					    android:paddingTop="1dp"
+						android:layout_marginLeft="5dp" style="@style/greenRatingBar"
+ 						android:layout_toRightOf="@+id/price" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:isIndicator="true">
+					</RatingBar>
+				</RelativeLayout>
+
+				<TextView android:id="@+id/desc" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:layout_below="@+id/xlayout"
+					android:ellipsize="none" android:maxLength="18"
+					android:layout_marginTop="1dp" android:singleLine="true"
+					android:textColor="@color/soft_list_item_desc_color"
+					android:textSize="12sp" />
+			</RelativeLayout>
+
+			<RelativeLayout android:id="@+id/sizeAndPriceLayout"
+				android:layout_width="45dp" android:layout_height="fill_parent"
+				 android:layout_marginRight="5dp"
+
+				android:layout_toLeftOf="@+id/pricelayout">
+
+				<RelativeLayout android:id="@+id/sizeAndprocessLayout"
+				    android:layout_centerVertical="true"
+					android:layout_width="45dp" android:layout_height="wrap_content">
+
+					<TextView android:id="@+id/process"
+						android:layout_alignParentRight="true"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:textColor="@color/soft_list_item_process_color"
+						android:textSize="@dimen/process_text_size" android:visibility="gone" />
+				</RelativeLayout>
+
+
+			</RelativeLayout>
+
+			<RelativeLayout android:id="@+id/pricelayout"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true" android:layout_marginRight="2dp"
+				android:background="@drawable/download_image_download" />
+
+			<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:id="@+id/mainlayout" android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:orientation="vertical"
+				android:visibility="gone">
+
+				<Button android:id="@+id/button1" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:text="点击弹出对话框">
+				</Button>
+			</LinearLayout>
+		</RelativeLayout>
+	</RelativeLayout>
+	<RelativeLayout android:id="@+id/shareAndfavLayout"
+		android:layout_width="fill_parent" android:layout_marginTop="-5dp"
+		android:layout_height="63dp" android:background="@null"
+		android:orientation="vertical" android:visibility="gone">
+
+		<RelativeLayout android:layout_alignParentBottom="true"
+			android:layout_width="fill_parent" android:layout_marginTop="8dp"
+			android:layout_height="fill_parent" android:background="@drawable/quickaction_slider_background">
+
+			<LinearLayout android:id="@+id/actionLayout"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<ImageView android:id="@+id/shareImageView"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_marginLeft="18dp" android:layout_marginTop="10dp"
+					android:background="@drawable/share_list_btn_selector" />
+
+				<ImageView android:id="@+id/favoriteImageView"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_marginLeft="10dp" android:layout_marginTop="10dp"
+					android:background="@drawable/favorite_list_btn_selector" />
+
+
+			</LinearLayout>
+		</RelativeLayout>
+		<LinearLayout android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_marginTop="0dp"
+			android:layout_marginLeft="34dp" android:background="@drawable/listview_header" />
+	</RelativeLayout>
+</LinearLayout>

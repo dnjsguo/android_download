@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="OnScreenHintTextAppearance">
+		<item name="android:textColor">@android:color/primary_text_dark</item>
+		<item name="android:textColorHighlight">#FFFF9200</item>
+		<item name="android:textColorHint">#808080</item>
+		<item name="android:textColorLink">#5C5CFF</item>
+		<item name="android:textSize">16sp</item>
+		<item name="android:textStyle">normal</item>
+	</style>
+	<style name="OnScreenHintTextAppearance.Small">
+		<item name="android:textSize">14sp</item>
+		<item name="android:textStyle">normal</item>
+		<item name="android:textColor">@android:color/secondary_text_dark</item>
+	</style>
+	<style name="OnScreenHintTextAppearance.Small1">
+		<item name="android:textSize">14sp</item>
+		<item name="android:textColor">@color/lightgreen</item>
+	</style>
+	<style name="Animation" />
+	<style name="Animation.OnScreenHint">
+		<item name="android:windowEnterAnimation">@anim/on_screen_hint_enter</item>
+		<item name="android:windowExitAnimation">@anim/on_screen_hint_exit</item>
+	</style>
+	<style name="OnscreenActionIcon">
+		<item name="android:focusable">false</item>
+		<item name="android:clickable">true</item>
+		<item name="android:textSize">13dip</item>
+		<item name="android:singleLine">true</item>
+		<item name="android:ellipsize">marquee</item>
+		<item name="android:shadowColor">#FF000000</item>
+		<item name="android:shadowRadius">2.0</item>
+		<item name="android:textColor">#FFF</item>
+		<item name="android:gravity">center_horizontal</item>
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_weight">1</item>
+		<item name="android:drawablePadding">3dip</item>
+	</style>
+	<style
+		name="Theme.DeleteImageDialog"
+		parent="android:style/Theme.Dialog.Alert">
+	</style>
+	<style
+		name="greenCommentRatingBar"
+		parent="@android:style/Widget.RatingBar">
+		<item name="android:progressDrawable">@drawable/rating_bar_green_comment_style</item>
+		<item name="android:minHeight">35dp</item>
+		<item name="android:maxWidth">45dp</item>
+	</style>
+	<style
+		name="orangeRatingBar"
+		parent="@android:style/Widget.RatingBar">
+		<item name="android:progressDrawable">@drawable/rating_bar_orange_style</item>
+		<item name="android:minHeight">20dp</item>
+		<item name="android:maxWidth">20dp</item>
+	</style>
+	<style
+		name="greenRatingBar"
+		parent="@android:style/Widget.RatingBar">
+		<item name="android:progressDrawable">@drawable/rating_bar_green_style</item>
+		<item name="android:minHeight">10dp</item>
+		<item name="android:maxWidth">10dp</item>
+	</style>
+	<style name="baseinfo">
+		<item name="android:textColor">#000000</item>
+		<item name="android:textSize">16sp</item>
+	</style>
+	<style name="baseinfo_title">
+		<item name="android:textColor">#000000</item>
+		<item name="android:textSize">16sp</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+	<style name="baseinfo_select_content">
+		<item name="android:textColor">#000000</item>
+		<item name="android:textSize">14sp</item>
+	</style>
+	<style name="shadow">
+		<item name="android:shadowColor">#ffffff</item>
+		<item name="android:shadowDx">2</item>
+		<item name="android:shadowDy">2</item>
+		<item name="android:shadowRadius">2</item>
+	</style>
+	<style name="shadoworange">
+		<item name="android:shadowColor">#ff4500</item>
+		<item name="android:shadowDx">1</item>
+		<item name="android:shadowDy">-1</item>
+		<item name="android:shadowRadius">1</item>
+	</style>
+	<style
+		name="appdear_theme"
+		parent="@android:style/Theme.NoTitleBar">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowBackground">@color/transparent</item>
+	</style>
+</resources>

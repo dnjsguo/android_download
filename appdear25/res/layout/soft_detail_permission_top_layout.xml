@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="85dp"
+	android:background="@color/white">
+	<RelativeLayout
+		android:id="@+id/imageview_layout"
+		android:layout_width="56dp"
+		android:layout_height="56dp"
+		android:paddingTop="1dp"
+		android:paddingBottom="1dp"
+		android:layout_centerVertical="true">
+		<com.appdear.client.commctrls.AsynLoadImageView
+			android:id="@+id/imageView"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_centerInParent="true"
+			android:src="@drawable/soft_lsit_icon_default" />
+	</RelativeLayout>
+	<TextView
+		android:id="@+id/title"
+		android:paddingTop="5dp"
+		android:paddingLeft="15dp"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/imageview_layout"
+		android:textSize="20sp"
+		android:textStyle="bold"
+		android:textColor="@color/black"
+		android:layout_toLeftOf="@+id/price"
+		android:singleLine="true" />
+	<RatingBar
+		style="@style/greenRatingBar"
+		android:isIndicator="true"
+		android:id="@+id/star"
+		android:layout_alignLeft="@id/title"
+		android:layout_width="wrap_content"
+		android:layout_height="21dp"
+		android:layout_marginLeft="5dp"
+		android:layout_toRightOf="@+id/imageview_layout"
+		android:layout_below="@id/title"
+		android:scaleType="centerInside"
+		android:layout_marginTop="7dp"
+		android:layout_marginBottom="7dp" />
+	<TextView
+		android:id="@+id/price"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:layout_centerVertical="true"
+		android:text="积分"
+		android:textColor="@color/black"
+		android:textSize="14sp"
+		android:layout_marginRight="5dp" />
+	<ImageView
+		android:src="@drawable/soft_list_go_arrow"
+		android:layout_width="wrap_content"
+		android:layout_toRightOf="@id/price"
+		android:id="@+id/soft_list_go"
+		android:layout_centerVertical="true"
+		android:layout_height="wrap_content"></ImageView>
+</RelativeLayout>

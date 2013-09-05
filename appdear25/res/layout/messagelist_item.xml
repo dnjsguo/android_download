@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:padding="10dp"
+	android:background="@drawable/bg_item_state">
+	<ImageView
+		android:id="@+id/system_image"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:layout_centerVertical="true"
+		android:src="@drawable/ico_information" />
+	<TextView
+		android:id="@+id/systemmessage"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/system_image"
+		android:textSize="16sp"
+		android:textStyle="bold"
+		style="@style/shadow"
+		android:layout_marginTop="5dp"
+		android:layout_marginLeft="10dp"
+		android:text="系统消息:"
+		android:textColor="@color/soft_list_item_tile_color" />
+	<TextView
+		android:id="@+id/message_info"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/systemmessage"
+		android:layout_marginTop="5dip"
+		android:layout_alignLeft="@+id/systemmessage"
+		android:textSize="14sp"
+		android:text="无数的系统提示。。。。。"
+		android:textColor="@color/soft_list_item_desc_color"
+		style="@style/shadow" />
+</RelativeLayout>

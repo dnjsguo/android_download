@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+		android:layout_weight="1"
+		android:orientation="vertical">
+		<!-- content -->
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:orientation="vertical"
+			android:background="@color/lightRed">
+			<LinearLayout
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_width="fill_parent">
+				<TextView
+					android:id="@+id/userCenter_tv_nickName"
+					android:layout_width="wrap_content"
+					android:text="我是老大"
+					android:paddingLeft="4dp"
+					android:layout_weight="1"
+					android:layout_height="wrap_content" />
+				<TextView
+					android:id="@+id/userCenter_tv_yue"
+					android:layout_width="wrap_content"
+					android:layout_gravity="right"
+					android:gravity="right"
+					android:paddingRight="4dp"
+					android:layout_weight="1"
+					android:layout_height="wrap_content"
+					android:text="账户余额：1000元" />
+			</LinearLayout>
+			<LinearLayout
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_width="fill_parent">
+				<TextView
+					android:id="@+id/userCenter_tv_level"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:paddingLeft="4dp"
+					android:text="黄金长老" />
+				<TextView
+					android:id="@+id/userCenter_tv_jifen"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="积分：3000"
+					android:paddingRight="4dp"
+					android:layout_weight="1"
+					android:layout_gravity="right"
+					android:gravity="right" />
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

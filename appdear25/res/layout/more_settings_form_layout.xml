@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/nav_bg_1" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="3dip"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/dashed_line"
+            android:visibility="gone" >
+        </ImageView>
+
+        <ImageButton
+            android:id="@+id/setting_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:background="#0000"
+            android:src="@drawable/tab_img_return" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="设置"
+            android:textColor="#777777"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/title_layout"
+        android:layout_marginBottom="15dp"
+        android:layout_weight="1"
+        android:background="@color/white" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/pic_settings_pic"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="图片设置"
+                android:textColor="@color/soft_list_item_text_color"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/pic_settings"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pic_settings_pic"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="3dp"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/txlbf_state"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp" >
+
+                    <TextView
+                        android:id="@+id/title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:text="显示软件图标"
+                        android:textColor="#777777"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <!--
+                         <TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="不加载图标将减少网络流量"
+						android:layout_below="@+id/title1"
+						android:layout_marginTop="5dp"
+						android:textColor="#777777" />
+                    -->
+
+                    <CheckBox
+                        android:id="@+id/loadsofticon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/radiobuttonselect"
+                        android:checked="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/txlhy_state"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp" >
+
+                    <TextView
+                        android:id="@+id/title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:text="显示软件截图"
+                        android:textColor="#777777"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <!--
+                         <TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="不加载截图将减少网络流量"
+						android:layout_below="@+id/title1"
+						android:layout_marginTop="5dp"
+						android:textColor="#777777" />
+                    -->
+
+                    <CheckBox
+                        android:id="@+id/loadsnapshot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/radiobuttonselect"
+                        android:checked="true" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/setting_other_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pic_settings"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="下载设置"
+                android:textColor="@color/soft_list_item_text_color"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/setting_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/setting_other_pic"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="3dp"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/txlbf_state"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp" >
+
+                    <TextView
+                        android:id="@+id/title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="只在WIFI网络环境下载软件"
+                        android:textColor="#777777"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <!--
+                         <TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="在wifi网络环境下载将减少网络流量"
+						android:layout_below="@+id/title1"
+						android:layout_marginTop="5dp"
+						android:textColor="#777777" />
+                    -->
+
+                    <CheckBox
+                        android:id="@+id/loadwifi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/radiobuttonselect"
+                        android:checked="false" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/txlbg3_state"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp" >
+
+                    <TextView
+                        android:id="@+id/title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="下载完自动安装"
+                        android:textColor="#777777"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/autoinstall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/radiobuttonselect"
+                        android:checked="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/txlhy_state"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp" >
+
+                    <TextView
+                        android:id="@+id/title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="安装完成后删除安装文件"
+                        android:textColor="#777777"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/deleteApk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/radiobuttonselect"
+                        android:checked="true" />
+                </RelativeLayout>
+                <!-- 2011 10 12 zxy 增加 相关变更：在设置中增加设置项：开启软件更新提示。（副标题：关闭提示后，通知栏中将不会出现软件更新信息。 -->
+
+                <LinearLayout
+                    android:id="@+id/host_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/spinner_bg"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/host_settings"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/hosttitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="设置服务器地址"
+                        android:textColor="#777777"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/hostcontent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/hosttitle"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#777777" />
+
+                    <Button
+                        android:id="@+id/host_setting_button"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="设置"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/setting_other"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="更新设置"
+                android:textColor="@color/soft_list_item_text_color"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/txlbg4_state"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp" >
+
+                <RelativeLayout
+                    android:id="@+id/ll_update_set"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="开启软件更新提示"
+                        android:textColor="#777777"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/softUpdateTip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/radiobuttonselect"
+                        android:checked="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_update_set"
+                    android:text="关闭提示后，通知栏中将不会出现软件更新信息" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

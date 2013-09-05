@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- jdan 2011-07通用列表显示 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget21"
+    android:background="#ffffff"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_below="@+id/widget1" >
+
+    <!-- Header -->
+       <LinearLayout
+        android:id="@+id/ll_navigation"
+        android:layout_width="fill_parent"
+        android:layout_height="53dp"
+        android:layout_below="@+id/widget21"
+        android:background="@drawable/nav_bg_1"
+        android:orientation="vertical" >
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="3dip"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/dashed_line" android:visibility="gone">
+        </ImageView>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/layout"
+            android:gravity="center">
+           <ImageButton
+                android:id="@+id/btn_return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:background="@drawable/tab_img_return"
+                android:layout_centerVertical="true" />
+            <TextView
+                android:id="@+id/tv_navigation"
+              	android:paddingLeft="50dp"
+              	android:paddingRight="50dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="机型保修范围查询"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:textColor="@color/tabtextcolor"
+               	android:ellipsize="marquee"
+               	android:singleLine="true"
+				android:marqueeRepeatLimit="marquee_forever"
+				android:focusable="true"
+				android:focusableInTouchMode="true"
+                android:textSize="18dp" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- 底部功能菜单栏 -->
+    <LinearLayout
+        android:id="@+id/common_list_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+         android:layout_marginRight="20dp"
+          android:layout_marginTop="20dp"
+          android:layout_marginBottom="20dp"
+        android:background="@drawable/sjdr_bg"
+        android:layout_below="@+id/ll_navigation"
+        android:orientation="vertical" >
+        <com.appdear.client.commctrls.ListViewRefresh
+        android:id="@+id/soft_list"
+       
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="#E6E7EB"
+        android:dividerHeight="2px"
+        android:drawSelectorOnTop="false"
+        android:fadingEdge="none"
+        android:scrollingCache="false" />
+    </LinearLayout>
+
+</RelativeLayout>

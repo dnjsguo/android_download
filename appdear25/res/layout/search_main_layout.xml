@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/share_paopao"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/search_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="53dp"
+        android:background="@drawable/nav_bg_1" >
+		<ImageView
+            android:id="@+id/iv_voice_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/voice_dialog1"
+            android:layout_centerVertical="true"
+            android:layout_alignBottom="@+id/search_button"
+            android:paddingLeft="5dp" />
+        <AutoCompleteTextView
+            android:id="@+id/auto_complete"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignBottom="@+id/search_button"
+            android:layout_alignTop="@+id/search_button"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@+id/search_button"
+            android:layout_toRightOf="@+id/iv_voice_search"
+            android:background="@drawable/edit_login"
+            android:completionHint="系统智能匹配结果."
+            android:hint="请输入软件名称"
+            android:paddingLeft="8dp"
+            android:paddingRight="45dp"
+            android:singleLine="true"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/mBtn_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/auto_complete"
+            android:layout_alignTop="@+id/auto_complete"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="9dp"
+            android:layout_toLeftOf="@+id/search_button"
+            android:padding="3dp" />
+
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/search_button_bg1"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/search_edit"
+        android:background="#dcdbda" />
+
+    <!-- row  1 -->
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layouview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/linearLayout1" >
+
+        <com.appdear.client.commctrls.SearchRankingView
+            android:id="@+id/rankingview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/refresh_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="加载数据异常，点击此处刷新列表"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

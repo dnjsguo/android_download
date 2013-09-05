@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="290dp"
+	android:layout_height="420dp"
+	android:orientation="vertical"
+	android:background="@color/white"
+ 	>
+
+     
+  <TextView
+       android:id="@+id/title"
+       android:background="#dbdddd"
+       android:layout_width="fill_parent"
+       android:layout_height="50dp"
+       android:paddingTop="15dp"
+       android:paddingLeft="20dp"
+        android:text="请勾选您要还原的应用"
+       android:textSize="18sp"
+        />
+   <com.appdear.client.commctrls.ListViewRefresh
+        android:id="@+id/installed_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="#E6E7EB"
+		android:cacheColorHint="#00000000" 
+		android:dividerHeight="1px"
+        android:drawSelectorOnTop="false"
+        android:fadingEdge="none"
+        android:scrollingCache="false"
+        android:layout_weight="0.1" 
+         />
+     
+ <LinearLayout 
+    android:layout_height="50dp" 
+	android:layout_width="fill_parent" 
+	android:background="#dbdddd"
+ 	android:orientation="horizontal">
+	<Button android:id="@+id/allSelectedButton"
+	    android:layout_marginTop="5dp"
+	    android:layout_marginBottom="5dp"
+		android:layout_width="0dp"
+		android:layout_height="fill_parent"
+		android:layout_weight="1"
+		android:layout_marginLeft="15dp"
+		android:textSize="16sp"
+		android:background="@drawable/comment_submit_btn_normal"
+		android:textColor="#f8982f"
+		android:text="全选"/>
+	<Button android:id="@+id/restoredButton"
+		android:layout_width="0dp"
+		android:layout_marginTop="5dp"
+	    android:layout_marginBottom="5dp"
+		android:layout_height="fill_parent"	 
+		android:layout_marginRight="15dp"
+		android:layout_weight="1"
+		android:layout_marginLeft="15dp"
+		android:textSize="16sp"
+		android:background="@drawable/comment_submit_btn_normal"
+		android:textColor="#f8982f"
+		android:text="还原到本地"/>
+	</LinearLayout>
+</LinearLayout>

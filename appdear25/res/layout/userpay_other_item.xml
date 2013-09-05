@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:zxy="1234"
+	android:id="@+id/soft_pay_type"
+	android:layout_width="fill_parent"
+	android:layout_below="@+id/top"
+	android:layout_height="wrap_content"
+	android:padding="5dp"
+	android:orientation="vertical">
+	<TextView
+		android:layout_width="wrap_content"
+		android:text="商品名称 ： "
+		android:layout_weight="1"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="5dp"
+		android:layout_marginLeft="20dp"
+		style="@style/shadow"
+		android:id="@+id/userpay_name"
+		android:textColor="@color/black"
+		android:textSize="16sp"
+		android:textStyle="bold" />
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_weight="1"
+		android:layout_height="wrap_content"
+		android:layout_alignTop="@+id/userpay_name"
+		style="@style/shadow"
+		android:id="@+id/userpay_name_t"
+		android:layout_toRightOf="@+id/userpay_name"
+		android:textColor="@color/black"
+		android:textSize="16sp"
+		android:textStyle="bold" />
+	<TextView
+		android:layout_width="wrap_content"
+		android:text="价       格 ："
+		android:layout_weight="1"
+		android:layout_height="wrap_content"
+		android:layout_alignLeft="@+id/userpay_name"
+		android:layout_marginTop="10dp"
+		android:layout_below="@+id/userpay_name"
+		style="@style/shadow"
+		android:id="@+id/userpay_price"
+		android:textColor="@color/black"
+		android:textSize="16sp"
+		android:textStyle="bold" />
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_weight="1"
+		android:layout_height="wrap_content"
+		android:layout_alignTop="@+id/userpay_price"
+		style="@style/shadow"
+		android:id="@+id/userpay_price_t"
+		android:layout_toRightOf="@+id/userpay_price"
+		android:textColor="@color/black"
+		android:textSize="16sp"
+		android:textStyle="bold" />
+</RelativeLayout>

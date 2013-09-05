@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:zxy="http://meiyitianabc.blog.163.com"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<com.appdear.client.commctrls.TopTabbar
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/tab_control1"
+		zxy:id="0x1234"
+		zxy:topContainerHeight="40"
+		zxy:ContentContainerHeight="400" />
+</LinearLayout>

@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+      android:background="@color/white"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/match_tv_marging_top"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tbg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onTextClick"
+                android:text="学习"
+                android:textColor="@color/match_tv_text_color" />
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/match_tv_marging_left"
+                android:background="@drawable/tbg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onTextClick"
+                android:text="开会"
+                android:textColor="@color/match_tv_text_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/match_tv_marging_top"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tbg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onTextClick"
+                android:text="上厕所等待"
+                android:textColor="@color/match_tv_text_color"
+                android:textSize="@dimen/match_tv_size_big" />
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/match_tv_marging_left"
+                android:background="@drawable/tbg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onTextClick"
+                android:text="读书看报"
+                android:textColor="@color/match_tv_text_color"
+                android:textSize="@dimen/match_tv_size_big" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/match_tv_marging_top"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tbg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onTextClick"
+                android:text="玩手机等待"
+                android:textColor="@color/match_tv_text_color"
+                android:textSize="@dimen/match_tv_size_big" />
+
+            <TextView
+                android:id="@+id/tv6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/match_tv_marging_left"
+                android:background="@drawable/tbg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onTextClick"
+                android:text="坐车"
+                android:textColor="@color/match_tv_text_color"
+                android:textSize="@dimen/match_tv_size_big" />
+
+            <TextView
+                android:id="@+id/tv7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/match_tv_marging_left"
+                android:background="@drawable/tbg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onTextClick"
+                android:text="办公室"
+                android:textColor="@color/match_tv_text_color"
+                android:textSize="@dimen/match_tv_size_big" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/match_tv_marging_top"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tbg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onTextClick"
+                android:text="等待某人或某事"
+                android:textColor="@color/match_tv_text_color" />
+
+            <TextView
+                android:id="@+id/tv9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/match_tv_marging_left"
+                android:background="@drawable/tbg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onTextClick"
+                android:text="在医院"
+                android:textColor="@color/match_tv_text_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/match_tv_marging_top"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tbg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onTextClick"
+                android:text="看电影"
+                android:textColor="@color/match_tv_text_color"
+                android:textSize="@dimen/match_tv_size_big" />
+
+            <TextView
+                android:id="@+id/tv11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/match_tv_marging_left"
+                android:background="@drawable/tbg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onTextClick"
+                android:text="看电视"
+                android:textColor="@color/match_tv_text_color"
+                android:textSize="@dimen/match_tv_size_big" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/match_tv_marging_top"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tbg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onTextClick"
+                android:text="吃饭"
+                android:textColor="@color/match_tv_text_color" />
+
+            <TextView
+                android:id="@+id/tv13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/match_tv_marging_left"
+                android:background="@drawable/tbg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onTextClick"
+                android:text="在被窝"
+                android:textColor="@color/match_tv_text_color" />
+
+            <TextView
+                android:id="@+id/tv14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/match_tv_marging_left"
+                android:background="@drawable/tbg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onTextClick"
+                android:text="发短信"
+                android:textColor="@color/match_tv_text_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/match_tv_marging_top"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tbg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onTextClick"
+                android:text="摄影"
+                android:textColor="@color/match_tv_text_color" />
+
+            <TextView
+                android:id="@+id/tv16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/match_tv_marging_left"
+                android:background="@drawable/tbg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onTextClick"
+                android:text="伤心"
+                android:textColor="@color/match_tv_text_color" />
+
+            <TextView
+                android:id="@+id/tv17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/match_tv_marging_left"
+                android:background="@drawable/tbg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onTextClick"
+                android:text="开车"
+                android:textColor="@color/match_tv_text_color" />
+
+            <TextView
+                android:id="@+id/tv18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/match_tv_marging_left"
+                android:background="@drawable/tbg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onTextClick"
+                android:text="无聊"
+                android:textColor="@color/match_tv_text_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/match_tv_marging_top"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tbg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onTextClick"
+                android:text="发短信"
+                android:textColor="@color/match_tv_text_color" />
+
+            <TextView
+                android:id="@+id/tv20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/match_tv_marging_left"
+                android:background="@drawable/tbg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onTextClick"
+                android:text="玩手机"
+                android:textColor="@color/match_tv_text_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/match_tv_marging_top"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tbg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onTextClick"
+                android:text="摄影"
+                android:textColor="@color/match_tv_text_color" />
+
+            <TextView
+                android:id="@+id/tv22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/match_tv_marging_left"
+                android:background="@drawable/tbg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onTextClick"
+                android:text="在医院"
+                android:textColor="@color/match_tv_text_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/match_tv_marging_top"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tbg"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onTextClick"
+                android:text="写文档"
+                android:textColor="@color/match_tv_text_color" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
