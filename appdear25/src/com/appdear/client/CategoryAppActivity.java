@@ -110,6 +110,7 @@ public class CategoryAppActivity extends ListBaseActivity implements OnItemClick
 	@Override
 	public void initData() {
 		try {
+			//113671
 			id = SharedPreferencesControl.getInstance().getInt("201", com.appdear.client.commctrls.Common.SECTIONCODEXML, this);
 			result = ApiManager.cataloglist(id+"", pageno, count);
 			if(null==result.catalogList){

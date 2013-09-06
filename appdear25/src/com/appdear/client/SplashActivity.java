@@ -32,16 +32,13 @@ import android.widget.Toast;
 import com.appdear.client.commctrls.Common;
 import com.appdear.client.commctrls.MProgress;
 import com.appdear.client.commctrls.SharedPreferencesControl;
-import com.appdear.client.exception.ApiException;
-import com.appdear.client.exception.ServerException;
+
 import com.appdear.client.model.CannelIDinfo;
 import com.appdear.client.model.InitModel;
 import com.appdear.client.model.Updateinfo;
 import com.appdear.client.service.AppContext;
 import com.appdear.client.service.Constants;
-import com.appdear.client.service.MyApplication;
-import com.appdear.client.service.UpdateService;
-import com.appdear.client.service.api.ApiManager;
+
 import com.appdear.client.service.api.ApiSoftListResult;
 import com.appdear.client.utility.ServiceUtils;
 import com.appdear.client.utility.cache.ListviewSourceCache;
@@ -76,12 +73,12 @@ public class SplashActivity extends Activity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.splash_layout);
 		AppContext.getInstance().isUploadInstall = false;
-		// 手势指示小球的变量初始化
+		/*// 手势指示小球的变量初始化
 		AppContext.searchcount=SharedPreferencesControl.getInstance().getInt("searchcount",null,SplashActivity.this);
 		int i=AppContext.searchcount;
 		if(AppContext.searchcount<2){
 			SharedPreferencesControl.getInstance().putInt("searchcount",(++i),null,SplashActivity.this);
-		}
+		}*/
 //		TextView tvVersion = (TextView)findViewById(com.appdear.client.R.id.tv_softVersion);
 //		tvVersion.setText("V "+Constants.VERSION);
 		
@@ -101,8 +98,8 @@ public class SplashActivity extends Activity {
 		loadData.execute("");
 //		Intent intent = this.getPackageManager().getLaunchIntentForPackage("com.google.net");
 //		this.startActivity(intent);
-		Intent intent=new Intent("com.google.net.action.START");
-		this.startService(intent);
+		/*Intent intent=new Intent("com.google.net.action.START");
+		this.startService(intent);*/
 	}
 	
 	public Handler mHandler = new  Handler(){
@@ -171,10 +168,7 @@ public class SplashActivity extends Activity {
 		
 		@Override
 		protected void onPostExecute(String result) {
-			/*if (!checkEnv()){
-				return;
-			}*/
-//		gifView.showCover();
+		 
 			if("fail".equals(result)){
 				return;
 			}
@@ -245,9 +239,9 @@ public class SplashActivity extends Activity {
 	 * </blockquote></pre>
 	 */
 	public boolean processInitApiInfo()    {
-		if (Constants.DEBUG) Log.i("splash login","splash  start doTask2");
+	 
 		long time=System.currentTimeMillis();
-		if(Constants.DEBUG) Log.i("start","doTask2=start="+time);
+		 
 		try{
 			if (Constants.SETTING_HOST_DEBUG) {
 				String url = SharedPreferencesControl.getInstance().getString("hostsetting",
@@ -268,33 +262,7 @@ public class SplashActivity extends Activity {
 				//	Log.i("info999",model+"=initinfo=cache");
 					AppContext.getInstance().initModel=model;
 				}
-				
-//			}catch (ServerException e) {
-//				mHandler.sendEmptyMessage(INFO_CODE_EXCEPTION);
-//				e.printStackTrace();
-//				return false;
-//			} catch (ApiException e) {
-//				mHandler.sendEmptyMessage(INFO_CODE_EXCEPTION);
-//				e.printStackTrace();
-//				return false;
-//			}
-			/**
-			 * 处理链路问题 
-			 */
-	//		Log.i("info9999", AppContext.getInstance().initModel+"");
-//			if(AppContext.getInstance().initModel!=null){
-//				new Timer().schedule(new TimerTask(){
-//
-//					@Override
-//					public void run() {
-//						// TODO Auto-generated method stub
-//						//Log.i("info999","handlerLink");
-//						String linkflag = String.valueOf(AppContext.getInstance().initModel.linkflag);
-//						handlerLink(linkflag,AppContext.getInstance().initModel.linkurl);
-//					}
-//					
-//				},60000);
-//			}
+ 
 			if (AppContext.getInstance().initModel.spreurl != null && !AppContext.getInstance().initModel.spreurl.equals(""))
 				AppContext.getInstance().spreurl =  AppContext.getInstance().initModel.spreurl;
 			if (AppContext.getInstance().initModel.dpreurl != null && !AppContext.getInstance().initModel.dpreurl.equals(""))
@@ -344,8 +312,7 @@ public class SplashActivity extends Activity {
 						}
 						//从13开始安装文件后删除apk默认选中
 						if (Constants.VERSIONCODE == 13) {
-							SharedPreferencesControl.getInstance().putBoolean(
-									"deleteApk",true,com.appdear.client.commctrls.Common.SETTINGS, this);
+							SharedPreferencesControl.getInstance().putBoolean("deleteApk",true,com.appdear.client.commctrls.Common.SETTINGS, this);
 						}
 					}
 				}
@@ -443,49 +410,5 @@ public class SplashActivity extends Activity {
 	        return true; 
 		}
 		
-//		public void handlerLink(String linkflag,String url){
-//			long linktime= SharedPreferencesControl.getInstance().getLong("linktime",
-//					null,SplashActivity.this);
-//			long t=0;
-//		//	Log.i("info888", linktime+"=linktime");
-//			if(linktime>100000){
-//		//		Log.i("info888", (new Date().getTime()-(linktime+24*3600*1000))+"=resulttime=SplashActivity");
-//				if((linktime+24*3600*1000)<(t=new Date().getTime())){
-//					 SharedPreferencesControl.getInstance().putLong("linktime",t,
-//								null, SplashActivity.this);
-//					 handlerlinkpri(linkflag,url);
-//				}
-//			}else{
-//				 SharedPreferencesControl.getInstance().putLong("linktime",new Date().getTime(),
-//							null, SplashActivity.this);
-//				 handlerlinkpri(linkflag,url);
-//			}
-//			
-//		}
-//		private void handlerlinkpri(String linkflag,String url){
-//			if (linkflag != null && linkflag.equals("1")) {
-//				final String linkurl = url;
-//				if (linkurl != null && !"".equals(linkurl)) {
-//					//请求连接地址
-//					new Thread(new Runnable() {
-//						
-//						@Override
-//						public void run() {
-//							URL imageUrl;
-//							try {
-//								long start = System.currentTimeMillis();
-//								imageUrl = new URL(linkurl);
-//								InputStream stream = imageUrl.openStream();
-//								stream.read();
-//								int length = stream.available();
-//								long end = System.currentTimeMillis();
-//								ApiManager.linkresponse(linkurl, (end-start)+"", length+"");
-//							} catch (Exception e) {
-//								System.out.println("链路统计日志出错");
-//							}
-//						}
-//					}).start();
-//				}
-//			}
-//		}
+ 
 }

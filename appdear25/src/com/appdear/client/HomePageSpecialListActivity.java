@@ -66,10 +66,10 @@ public class HomePageSpecialListActivity extends ListBaseActivity {
 	 */
 	private int id = 100001;
 	
-	private String dy=InitModel.dynamic[0];
+	//private String dy=InitModel.dynamic[0];
 	
-	private boolean defflag=false;
-	private String asids=null;
+	//private boolean defflag=false;
+	//private String asids=null;
 	//TelephonyManager phoneMgr =null;
 	
 	/* (non-Javadoc)
@@ -111,32 +111,25 @@ public class HomePageSpecialListActivity extends ListBaseActivity {
 	public void initData() {
 		
 		try {
+			//113632
 			id = SharedPreferencesControl.getInstance().getInt("200039", com.appdear.client.commctrls.Common.SECTIONCODEXML, this);
-			String str=getDynamic();
-			dy=str;
-			result = ApiManager.dynamicsoftlist(id+"", page + "", PAGE_SIZE + "",dy,MyApplication.serial);
-			
-			//	Log.i("info90","initData="+result);
-			if (result == null){	
-				return;
-			}
-			listData = result.softList;
-			asids=result.asids;
-			if(listData==null||listData.size()==0){
-				showRefreshButton();
-				return;
-			}
+			int totalcount=0;
+			result = ApiManager.softlist(id+"", page + "", PAGE_SIZE + "");
 			page ++;
-			adapter = new SoftwarelistAdatper(this, listData, listView);
+			listData = result.softList;
+			totalcount=result.totalcount;
+		 
 			ServiceUtils.setSoftState(this,listData);
-			PAGE_TOTAL_SIZE = result.totalcount%PAGE_SIZE==0?
-					result.totalcount/PAGE_SIZE:result.totalcount/PAGE_SIZE+1;
-			adapter.notifyDataSetChanged();
-			if(result.def!=null&&result.def.equals("1")){
-				defflag=true;
-			}
+			adapter = new SoftwarelistAdatper(this, listData, listView);
+		
+			PAGE_TOTAL_SIZE = totalcount%PAGE_SIZE==0?
+					totalcount/PAGE_SIZE:totalcount/PAGE_SIZE+1;
+			
 			if (page <= PAGE_TOTAL_SIZE)
-				listView.setRefreshDataListener(this);
+				if(listView != null) listView.setRefreshDataListener(this);
+			
+			adapter.notifyDataSetChanged();
+			 
 		}catch (ApiException e) {
 			Log.e("net error:",e.getMessage(), e);
 			showException(e);
@@ -184,22 +177,17 @@ public class HomePageSpecialListActivity extends ListBaseActivity {
 	
 	@Override
 	public void doRefreshData() {
-		if (Constants.DEBUG)
-			Log.i("page....page....", page + "");
-		if (page > PAGE_TOTAL_SIZE) {
+		if (page > PAGE_TOTAL_SIZE&&listView!=null) {
 			listView.setEndTag(true);
 			return;
 		}
 		try {
-			result = null;
-			String dyn="";
-			if(defflag==false){
-				dyn=dy;
-			}
-			result = ApiManager.dynamicsoftlist(id+"", page + "", PAGE_SIZE + "",dyn,MyApplication.serial,getAsids(page));
+			result = ApiManager.softlist(id+"", page + "", PAGE_SIZE + "");
 			ServiceUtils.setSoftState(this,result.softList); 
+			 
 		} catch (ApiException e) {
-			Log.e("net error:",e.getMessage(), e);
+			if (Constants.DEBUG)
+				Log.e("ApiException error:",e.getMessage(), e);
 			showException(e);
 			listView.setErrTag(true);
 		}
@@ -211,25 +199,7 @@ public class HomePageSpecialListActivity extends ListBaseActivity {
 		adapter.notifyDataSetChanged();
 		super.dataNotifySetChanged();
 	}
-	private String getAsids(int page){
-		StringBuffer sb=null;
-		if(asids!=null&&!asids.equals("")){
-			sb=new StringBuffer();
-			String[] s=asids.split(",");
-			int offset=(page-1)*PAGE_SIZE;
-			if(offset>=s.length)return null;
-			int end=page*PAGE_SIZE-1;
-			end=s.length-1>=end?end:s.length-1;
-			for(int i=offset;i<=end;i++){
-				sb.append(s[i]);
-				if(i<end){
-					sb.append(",");
-				}
-			}
-		}
-		if(sb!=null)return sb.toString();
-		else return null;
-	}
+	 
 }
 
  

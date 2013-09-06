@@ -139,7 +139,8 @@ public class InitModel  implements ApiResult, Serializable{
 		initlist.add(getInfo(113640,102));
 		initlist.add(getInfo(113695,104));
 		initlist.add(getInfo(113671,201));
-		initlist.add(getInfo(113672,202));initlist.add(getInfo(113673,203));
+		initlist.add(getInfo(113672,202));
+		initlist.add(getInfo(113673,203));
 		initlist.add(getInfo(113681,601));
 		initlist.add(getInfo(113632,200039));
 	}

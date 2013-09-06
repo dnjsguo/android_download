@@ -160,7 +160,7 @@ public class MyApplication extends Application {
     }*/
 	public Bitmap  getBitmapByUrl(String imageUrl)
 	{
-		VMRuntime.getRuntime().setMinimumHeapSize(10*1024*1024);
+	 	VMRuntime.getRuntime().setMinimumHeapSize(10*1024*1024);
 	/*	Collection<SoftReference<Bitmap>> collection=imageCache.values();
 		int i=0;
 		int count=0;

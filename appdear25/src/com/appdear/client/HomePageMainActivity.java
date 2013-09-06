@@ -182,7 +182,7 @@ public class HomePageMainActivity extends BaseGroupActivity implements
 		public void callback(int position) {
 			topFlag=position;
 			MainActivity.topLogFlag=topFlag;
-			if(position == 0)
+			/*if(position == 0)
 			{
 				createFirstView();
 
@@ -199,11 +199,11 @@ public class HomePageMainActivity extends BaseGroupActivity implements
 	                    new Intent(HomePageMainActivity.this, HomePageSpecialListActivity.class)
 	                            .addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP))
 	                    .getDecorView();
-		 	}
+		 	}*/
 		}
 	};
 
-  public void   createFirstView()
+  /*public void   createFirstView()
   {
 		long starttime=SharedPreferencesControl.getInstance().getLong("starttime",
 				null,this);
@@ -232,7 +232,7 @@ public class HomePageMainActivity extends BaseGroupActivity implements
                         .addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP))
                 .getDecorView();
 	 
-  }
+  }*/
 	@Override
 	public View viewFirst() {
 		topFlag=0;

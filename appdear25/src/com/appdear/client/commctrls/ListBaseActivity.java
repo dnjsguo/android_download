@@ -1,8 +1,8 @@
 /**
  * ListBaseActivity.java
- * created at:2011-5-11ÉÏÎç11:05:09
+ * created at:2011-5-11é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·11:05:09
  * 
- * Copyright (c) 2011, ±±¾©°®Æ¤¿Æ¼¼ÓĞÏŞ¹«Ë¾
+ * Copyright (c) 2011, é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·çš®é”Ÿç‹¡ç¡·æ‹·é”Ÿæ–¤æ‹·é”Ÿç«ç™¸æ‹·å¸
  *
  * All right reserved
  */
@@ -57,18 +57,18 @@ import com.appdear.client.service.MyApplication;
 import com.appdear.client.utility.ServiceUtils;
 
 /**
- * ÁĞ±í»ùÀà
+ * é”Ÿå«æ†‹æ‹·é”Ÿæ–¤æ‹·é”Ÿï¿½
  * 
  * @author zqm
  */
 public abstract class ListBaseActivity extends BaseActivity implements
 		RefreshDataListener {
 	/**
-	 * ÏÔÊ¾ÁĞ±í
+	 * é”Ÿæ–¤æ‹·ç¤ºé”Ÿå«æ†‹æ‹·
 	 */
 	protected ListViewRefresh listView;
 	/**
-	 * zxy 2011 10 12 Ìí¼Ó±êÖ¾£¬¸²¸Ç»ùÀàµÄÌ§³ö¼ÓÔØÌáÊ¾¿ò
+	 * zxy 2011 10 12 é”Ÿæ–¤æ‹·é¢–é”Ÿè¡—æ’…æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·è…”é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·æŠ¬é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·ç¤ºé”Ÿæ–¤æ‹·
 	 */
 	protected boolean isShowAlert = false;
 	// private LinearLayout loadingView = null;
@@ -79,13 +79,13 @@ public abstract class ListBaseActivity extends BaseActivity implements
 	protected static int width = 0;
 	protected static int height = 0;
 	/**
-	 * ×ÜÒ³Âë
+	 * é”Ÿæ–¤æ‹·é¡µé”Ÿæ–¤æ‹·
 	 */
 	protected int PAGE_TOTAL_SIZE = 1;
 	/**
-	 * Ã¿Ò³ÏÔÊ¾10Ìõ
+	 * æ¯é¡µé”Ÿæ–¤æ‹·ç¤º10é”Ÿæ–¤æ‹·
 	 */
-	protected int PAGE_SIZE = 15;
+	protected int PAGE_SIZE =100;// 15;
 
 	/**
 	 * adapter
@@ -93,16 +93,16 @@ public abstract class ListBaseActivity extends BaseActivity implements
 	public BaseAdapter adapter;
 
 	/**
-	 * Ò³Âë
+	 * é¡µé”Ÿæ–¤æ‹·
 	 */
 	protected int page = 1;
 
 	public IntentFilter filter;
-	// ½â¾öÒÑ·ÖÏí½çÃæ¶¯»­Î»ÖÃÎÊÌâ
+	// é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é€Šé”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”ŸèŠ¥åŠ¨é”Ÿæ–¤æ‹·ä½é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·
 	public boolean isOyyAlreadActivity = false;
 
 	/**
-	 * Ë¢ĞÂUI
+	 * åˆ·é”Ÿæ–¤æ‹·UI
 	 */
 	public abstract void refreshDataUI();
 
@@ -119,7 +119,7 @@ public abstract class ListBaseActivity extends BaseActivity implements
 	public final static int LOADG = 12;
 
 	/**
-	 * Ë¢ĞÂÊı¾İ
+	 * åˆ·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿï¿½
 	 */
 	public abstract void doRefreshData();
 
@@ -133,7 +133,7 @@ public abstract class ListBaseActivity extends BaseActivity implements
 						.getHeight();
 				width = this.getWindowManager().getDefaultDisplay().getWidth();
 			}
-			// ));//Ìí¼Ó¿Ø¼ş,-1ÊÇÉèÖÃ¸ß¶ÈºÍ¿í¶È³äÂú²¼¾Ö£¬-2ÊÇ°´ÕÕĞèÒªÉèÖÃ¿í¶È¸ß¶È¡£
+			// ));//é”Ÿæ–¤æ‹·æ¶Œä¸¶é”Ÿï¿½-1é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”ŸçŸ«é«˜åº¦å’ŒåŒ¡æ‹·ç˜¸é”Ÿæ–¤æ‹·é”Ÿè¡—ï½æ‹·-2é”Ÿè§’å¸®æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·è¦é”Ÿæ–¤æ‹·é”ŸçŸ«åŒ¡æ‹·é›€å¨å–é”Ÿï¿½
 			if (!AppContext.getInstance().isNetState) {
 				handler(false);
 				return;
@@ -148,7 +148,7 @@ public abstract class ListBaseActivity extends BaseActivity implements
 			if (View.VISIBLE == state) {
 //				if (mScreenHint != null)
 //					mScreenHint.cancel();
-				Toast.makeText(this, "ÒÑ¾­ÊÇ×îºóÒ»Ò³",Toast.LENGTH_SHORT).show();
+				Toast.makeText(this, "å·²ç»æ˜¯æœ€åä¸€é¡µ",Toast.LENGTH_SHORT).show();
 //				this.mScreenHint.show();
 			} else {
 //				if (mScreenHint != null)
@@ -179,7 +179,7 @@ public abstract class ListBaseActivity extends BaseActivity implements
 	}
 
 	/**
-	 * ¸üĞÂUI
+	 * é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·UI
 	 * 
 	 * @author
 	 */
@@ -190,44 +190,44 @@ public abstract class ListBaseActivity extends BaseActivity implements
 		@Override
 		public void handleMessage(Message msg) {
 			switch (msg.what) {
-			case JUST_NOW_UPDATE_FAVORITE: // ¸Õ¸Õµã»÷ÊÕ²ØµÄmsg
+			case JUST_NOW_UPDATE_FAVORITE: // é”Ÿç§¸åˆšç¢‰æ‹·é”Ÿæ–¤æ‹·è©¹æ°é”Ÿçµ¤sg
 				holder = (ItemViewHolder) msg.getData().get("info");
 				holder.favoriteImageView
 						.setBackgroundResource(R.drawable.favorite_list);
 				holder.favoriteImageView.setEnabled(false);
 
-				// Èç¹ûÓÃ»§µã»÷ÁËÊÕ²Ø°´Å¥£¬Ôò×Ô¶¯Òş²Ø¡°·ÖÏí¡¢ÊÕ²Ø¡±½çÃæ
+				// é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·æ²¡é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿç§¸è—å¸®æ‹·é’®é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿçš†è®¹æ‹·é”Ÿæ–¤æ‹·é”Ÿæˆªâ˜…æ‹·é”Ÿæ–¤æ‹·é”Ÿï¿½é”Ÿç§¸è—â˜…æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·
 				// Utils.sleep(500);
 				holder.actionLayout.setVisibility(View.GONE);
 				holder.contentLayout.setVisibility(View.VISIBLE);
 				holder.sizeAndPriceLayout.setVisibility(View.VISIBLE);
 				break;
-			case UPDATE_DOWNLOAD: // µã»÷ÏÂÔØ
+			case UPDATE_DOWNLOAD: // é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿï¿½
 				holder = (ItemViewHolder) msg.getData().get("info");
 				holder.actionLayout.setVisibility(View.GONE);
 				holder.contentLayout.setVisibility(View.VISIBLE);
 				break;
-			case UPDATE_FAVORITE: // ¼ì²âµ½ÒÑÊÕ²Ø
+			case UPDATE_FAVORITE: // é”Ÿæ–¤æ‹·ç¾æ–¤æ‹·é”Ÿæ–¤æ‹·è©¹é”Ÿï¿½
 				holder = (ItemViewHolder) msg.getData().get("info");
 				holder.favoriteImageView
 						.setBackgroundResource(R.drawable.favorite_list);
 				holder.favoriteImageView.setEnabled(false);
 				break;
-			case UPDATE_UNFAVORITE: // ¼ì²âµ½Î´ÊÕ²Ø
+			case UPDATE_UNFAVORITE: // é”Ÿæ–¤æ‹·ç¾è½¿è¾¾æ‹·è©¹é”Ÿï¿½
 				holder = (ItemViewHolder) msg.getData().get("info");
 				holder.favoriteImageView
 						.setBackgroundResource(R.drawable.favorite_button_list);
 				holder.favoriteImageView.setEnabled(true);
 				break;
 
-			case CALL_STATUS: // ¼ì²âµ½Î´ÊÕ²Ø
+			case CALL_STATUS: // é”Ÿæ–¤æ‹·ç¾è½¿è¾¾æ‹·è©¹é”Ÿï¿½
 				refreshDataUI();
 				break;
-			case SHARE_WEIBO_SUCESS: // ·ÖÏíÎ¢²©³É¹¦
-				Toast.makeText(ListBaseActivity.this, "Î¢²©·¢ËÍ³É¹¦",
+			case SHARE_WEIBO_SUCESS: // é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·å¾®é”Ÿæ–¤æ‹·é”Ÿç¼´ç™¸æ‹·
+				Toast.makeText(ListBaseActivity.this, "å¾®é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿé…µæˆç™¸æ‹·",
 						Toast.LENGTH_SHORT).show();
 				break;
-			case SHARE_WEIBO_FAILURE: // ·ÖÏíÎ¢²©Ê§°Ü
+			case SHARE_WEIBO_FAILURE: // é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·å¾®é”Ÿæ–¤æ‹·å¤±é”Ÿæ–¤æ‹·
 				Bundle b = msg.getData();
 				String message = b.getString("message");
 				Toast.makeText(ListBaseActivity.this, message,
@@ -272,7 +272,7 @@ public abstract class ListBaseActivity extends BaseActivity implements
 
 							String filename = f[f.length - 1];
 
-							// ²é¿´ÎÄ¼şÊÇ²»ÊÇ´æÔÚ
+							// é”Ÿä»‹çœ‹é”Ÿä¾¥ç¡·æ‹·é”Ÿè§’è¯§æ‹·é”Ÿè§’è¾¾æ‹·é”Ÿæ–¤æ‹·
 							if (fileDir != null
 									&& fileDir.exists()
 									&& new File(fileDir.getAbsoluteFile() + "/"
@@ -286,7 +286,7 @@ public abstract class ListBaseActivity extends BaseActivity implements
 									holder.icon.setImageURI(Uri.parse(filepath));
 						    	}catch (OutOfMemoryError e) {
 									System.gc();
-									Log.e("load image", "ÄÚ´æÒç³öÀ²");
+									 
 								}	
 						    	holder.item.softiconPath = filepath;
 
@@ -301,7 +301,7 @@ public abstract class ListBaseActivity extends BaseActivity implements
 								} else {
 									holder.icon.setImageResource(R.drawable.soft_lsit_icon_default);
 
-									// ÏÂÔØ
+									// é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·
 									if (listView != null
 											&& listView.getCountflag() != OnScrollListener.SCROLL_STATE_FLING
 											&& listView.getCountflag() != OnScrollListener.SCROLL_STATE_TOUCH_SCROLL) {
@@ -316,10 +316,10 @@ public abstract class ListBaseActivity extends BaseActivity implements
 							}
 
 						} else {
-							// ÒÑ¾­¸³Öµ¹ı
+							// é”Ÿçª–æ’…æ‹·é”Ÿæ–¤æ‹·å€¼é”Ÿæ–¤æ‹·
 
 							if (!new File(getStr(holder.item.softiconPath)).exists()) {
-								// ÏÂÔØµ½µ½ÄÚ´æ
+								// é”Ÿæ–¤æ‹·é”Ÿæˆªç¢‰æ‹·é”Ÿæ–¤æ‹·é”ŸèŠ‚è¾¾æ‹·
 								Bitmap bitmap =MyApplication.getInstance().getBitmapByUrl(holder.item.softicon);
 
 								//BitmapTemp bite = imageCache.isCached(item.softicon);
@@ -330,7 +330,7 @@ public abstract class ListBaseActivity extends BaseActivity implements
 									holder.icon
 											.setImageResource(R.drawable.soft_lsit_icon_default);
 
-									// ÏÂÔØ
+									// é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·
 									if (listView != null
 											&& listView.getCountflag() != OnScrollListener.SCROLL_STATE_FLING
 											&& listView.getCountflag() != OnScrollListener.SCROLL_STATE_TOUCH_SCROLL) {
@@ -372,7 +372,7 @@ public abstract class ListBaseActivity extends BaseActivity implements
 	public void showendalert() {
 //		if (mScreenHint != null)
 //			mScreenHint.cancel();
-		 Toast.makeText(this, "ÒÑ¾­ÊÇ×îºóÒ»Ò³",Toast.LENGTH_SHORT).show();
+		 Toast.makeText(this, "å·²ç»æ˜¯æœ€åä¸€é¡µ",Toast.LENGTH_SHORT).show();
 //		this.mScreenHint.show();
 	}
 
@@ -444,7 +444,7 @@ public abstract class ListBaseActivity extends BaseActivity implements
 	}
 
 	/**
-	 * ÅÅ³ı²»ÏÔÊ¾µÄactivity
+	 * é”Ÿè„šç­¹æ‹·é”Ÿæ–¤æ‹·ç¤ºé”Ÿæ–¤æ‹·activity
 	 */
 	private boolean notShowActivity() {
 		if (this instanceof SearchActivity
@@ -486,10 +486,10 @@ public abstract class ListBaseActivity extends BaseActivity implements
 				(this instanceof SearchResultActivity)||(this instanceof SoftwareDetailAuthorInfoActivity))
 		{
 			filter = new IntentFilter();
-			// ÏÂÔØÍê³ÉË¢ĞÂ½çÃæ
+			// é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿå‰¿î–æ‹·é™†é”Ÿæ–¤æ‹·é”Ÿï¿½
 			filter.addAction(Common.DOWNLOAD_NOTIFY);
 			registerReceiver(mReceiver1, filter);
-			// °²×°Íê³ÉË¢ĞÂ½çÃæ
+			// é”Ÿæ–¤æ‹·è£…é”Ÿæ–¤æ‹·é”Ÿå‰¿î–æ‹·é™†é”Ÿæ–¤æ‹·é”Ÿï¿½
 			filter.addAction(Intent.ACTION_PACKAGE_ADDED);
 			filter.addAction(Intent.ACTION_PACKAGE_REMOVED);
 			filter.addDataScheme("package");
@@ -579,7 +579,7 @@ public abstract class ListBaseActivity extends BaseActivity implements
 		public void onReceive(Context context, Intent intent) {
  			int softid = intent.getIntExtra("softid", -1);
 			 float process=intent.getFloatExtra("dprocess",0);
-			// dprocess -1 Íê³É -2 ÔİÍ£ -3 É¾³ı
+			// dprocess -1 é”Ÿæ–¤æ‹·é”Ÿï¿½-2 é”Ÿæ–¤æ‹·åœ -3 åˆ é”Ÿæ–¤æ‹·
 		    int downloadfinsh=intent.getIntExtra("downloadfinsh", 0);
 			//System.out.println("-listview--onReceive-------dprocess="+process);
 

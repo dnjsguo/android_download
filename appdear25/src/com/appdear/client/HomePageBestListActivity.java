@@ -1,8 +1,8 @@
 /**
  * TheBestListView.java
- * created at:2011-5-20ÏÂÎç01:19:33
+ * created at:2011-5-20é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·01:19:33
  * 
- * Copyright (c) 2011, ±±¾©°®Æ¤¿Æ¼¼ÓĞÏŞ¹«Ë¾
+ * Copyright (c) 2011, é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·çš®é”Ÿç‹¡ç¡·æ‹·é”Ÿæ–¤æ‹·é”Ÿç«ç™¸æ‹·å¸
  *
  * All right reserved
  */ 
@@ -15,6 +15,8 @@ import java.util.List;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
+
+import test.WangUtil;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -58,7 +60,7 @@ import com.appdear.client.utility.cache.ListviewSourceCache;
 import com.appdear.client.utility.cache.SourceCommon;
 
 /** 
- * ¾«Æ·ÍÆ¼ölist
+ * é”Ÿæ–¤æ‹·å“é”Ÿç‹¡ç¡·æ‹·list
  * 
  * @author zqm
  */
@@ -68,7 +70,7 @@ public class HomePageBestListActivity extends ListBaseActivity {
 	private ApiUserResult result1=null;
 	
 	/**
-	 * ÁĞ±íÊı¾İ
+	 * é”Ÿå«æ†‹æ‹·é”Ÿæ–¤æ‹·é”Ÿï¿½
 	 */
 	private ApiSoftListResult result;
 	
@@ -78,40 +80,36 @@ public class HomePageBestListActivity extends ListBaseActivity {
 	private List<SoftlistInfo> listData = null ;
 	
 	/**
-	 * À¸Ä¿id
+	 * é”Ÿæ–¤æ‹·ç›®id
 	 */
 	private int id = 100002;
 	
 	/**
-	 * ¹ã¸æ²¼¾ÖÏÔÊ¾
+	 * é”Ÿæ–¤æ‹·å¨Œç¡·æ‹·é”Ÿæ–¤æ‹·é”Ÿç»ï¿½
 	 */
 	private View mView;
 	
 	/**
-	 * ¹ã¸æ¿Ø¼ş
+	 * é”Ÿæ–¤æ‹·é”Ÿæˆªç¡·æ‹·
 	 */
 	private AdView adView;
 	
 	/**
-	 * ¹ã¸æurl
+	 * é”Ÿæ–¤æ‹·é”Ÿçµ¬rl
 	 */
 	private List<SoftlistInfo> urls;
 	
 	/**
-	 * ¹ã¸æ×Ô¶¯·­Ò³
+	 * é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·è¿œé”Ÿæ–¤æ‹·é”Ÿæ­ï¿½
 	 */
 	private ViewFlipper flipper;
 	
 	/**
-	 * ¹ã¸æÊı¾İ·µ»Ø
+	 * é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ·å‡¤æ‹·é”Ÿæ–¤æ‹·
 	 */
 	private ApiSoftListResult adresult;
 	
-	private boolean iscachesoftlist=true;
-	
-	HomeObj homeobj=null;
-	
-	private boolean defflag=false;
+	 
 	
 	private String asids=null;
 	/* (non-Javadoc)
@@ -150,7 +148,7 @@ public class HomePageBestListActivity extends ListBaseActivity {
 
 		flipper = (ViewFlipper) mView.findViewById(R.id.mViewFlipper);
 		
-		//³õÊ¼»¯Ê×Ò³¹ã¸æ
+		//é”Ÿæ–¤æ‹·å§‹é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é¡µé”Ÿæ–¤æ‹·é”Ÿï¿½
 		MpointView pointView = (MpointView) mView.findViewById(R.id.mMpointView);
 		int hegiht=metrics.widthPixels;
 		if(hegiht==0){
@@ -166,44 +164,19 @@ public class HomePageBestListActivity extends ListBaseActivity {
 	@Override
 	public void initData() {
 		try {
-			//¹ã¸æÊı¾İ»ñÈ¡
-//			if (AppContext.getInstance().spreurl == null || AppContext.getInstance().spreurl.equals("")) {
-//    			AppContext.getInstance().spreurl = SharedPreferencesControl.getInstance().getString(
-//    					"spreurl", com.appdear.client.commctrls.Common.SETTINGS, this);
-//    		}
-//    		if (AppContext.getInstance().dpreurl == null || AppContext.getInstance().dpreurl.equals("")) {
-//    			AppContext.getInstance().dpreurl = SharedPreferencesControl.getInstance().getString(
-//    					"dpreurl", com.appdear.client.commctrls.Common.SETTINGS, this);
-//    		}
-//    		id = SharedPreferencesControl.getInstance().getInt("104", com.appdear.client.commctrls.Common.SECTIONCODEXML, this);
-//			adresult = ApiManager.bannerlist(id + "", "0", "1", "20");
-//			
-			//ÁĞ±íÊı¾İ»ñÈ¡
+			 
+ 			
+			//é”Ÿå«æ†‹æ‹·é”Ÿæ–¤æ‹·è¼é”Ÿé¥ºï¿½
+			 //102
 			id = SharedPreferencesControl.getInstance().getInt("102", com.appdear.client.commctrls.Common.SECTIONCODEXML, this);
 			int totalcount=0;
-			if((homeobj=(HomeObj)ServiceUtils.getListview(SourceCommon.HOME_FIRST_NEW,this))==null){
-				homeobj=new HomeObj();
-				result = ApiManager.dynamicsoftlist2(id+"", page + "", PAGE_SIZE + "",homeobj.getDynamic());
-				page ++;
-				listData = result.softList;
-				totalcount=result.totalcount;
-//				Log.i("infodef", result.def+"=default=initData");
-//				if(result.def!=null&&!result.def.equals("1")){
-//					homeobj.setListData(listData);
-//					totalcount=result.totalcount;
-//					ServiceUtils.addListview(SourceCommon.HOME_FIRST_NEW, homeobj, this, result.totalcount);	
-//				}
-				asids=result.asids;
-				if(result.def!=null&&result.def.equals("1")){
-					iscachesoftlist=false;
-					defflag=true;
-				}
-			}else{
-				listData=homeobj.getListData();
-				asids=homeobj.getAsids();
-				totalcount=	SharedPreferencesControl.getInstance().getInt(SourceCommon.HOME_FIRST_NEW, com.appdear.client.commctrls.Common.LISTVIEWSOURCE_XML, this);
-				page ++;
-			}
+			//result = ApiManager.softlist(id+"", page + "", PAGE_SIZE + "");
+			result=WangUtil.getSoftList();
+			
+			page ++;
+			listData = result.softList;
+			totalcount=result.totalcount;
+		 
 			ServiceUtils.setSoftState(this,listData);
 			adapter = new SoftwarelistAdatper(this, listData, listView);
 		
@@ -214,7 +187,7 @@ public class HomePageBestListActivity extends ListBaseActivity {
 				if(listView != null) listView.setRefreshDataListener(this);
 			
 			adapter.notifyDataSetChanged();
-		} catch (ApiException e) {
+		} catch (Exception e) {
 			if (Constants.DEBUG)
 				Log.e("net error:",e.getMessage(), e);
 			showException(e);
@@ -234,9 +207,9 @@ public class HomePageBestListActivity extends ListBaseActivity {
 		SharedPreferencesControl.getInstance().putLong("starttime",new Date().getTime(),
 				null,this);
 		if(listView==null)return;
-		//½«µ±Ç°Ê±¼ä´æ´¢ 
+		//é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·å‰æ—¶é”Ÿæ–¤æ‹·å¨²ï¿½
 		if (listView.getAdapter() == null) {
-			//Ìí¼Ó¹ã¸æ
+			//é”Ÿæ–¤æ‹·åº¸é”Ÿæ–¤æ‹·
 			adView.setDefaultView();
 			listView.removeHeaderview();
 			listView.addHeaderView(mView);
@@ -248,13 +221,13 @@ public class HomePageBestListActivity extends ListBaseActivity {
 			public void onItemClick(AdapterView<?> arg0, View arg1,
 					int arg2, long arg3) {
 				if (arg1.getId() == mView.getId()) {
-					//µã»÷¹ã¸æ
+					//é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·
 					if (adView != null) {
 						if(urls==null)return;
 						SoftlistInfo info = (SoftlistInfo) urls.get(adView.getnPost());
 						if(info.adtype.equals("3")) {
 							Intent intent = new Intent(HomePageBestListActivity.this, SoftwareMainDetilActivity.class);
-			 				//Çå³ı½ø³Ìactivity
+			 				//é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿçµ˜ctivity
 							intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 							intent.putExtra("softid", info.softid);
 							intent.putExtra("type", "softid");
@@ -300,8 +273,9 @@ public class HomePageBestListActivity extends ListBaseActivity {
     		}
     		int id = SharedPreferencesControl.getInstance().getInt("104", com.appdear.client.commctrls.Common.SECTIONCODEXML, HomePageBestListActivity.this);
 			try {
-				adresult = ApiManager.bannerlist(id + "", "0", "1", "20");
-			} catch (ApiException e) {
+				//adresult = ApiManager.bannerlist(id + "", "0", "1", "20");
+				adresult=WangUtil.getAd();
+			} catch (Exception e) {
 				 
 				e.printStackTrace();
 			}
@@ -311,11 +285,12 @@ public class HomePageBestListActivity extends ListBaseActivity {
 					@Override
 					public void run() {
  						if(listView==null)return;
-							//Ìí¼Ó¹ã¸æ
+							//é”Ÿæ–¤æ‹·åº¸é”Ÿæ–¤æ‹·
 							if (adresult != null && adresult.softList != null) {
 								urls = adresult.softList;
 								List<String> urllist = new ArrayList<String>();
 								for (SoftlistInfo info : adresult.softList) {
+									System.out.println("ad imgurl="+info.imgurl);
 									urllist.add(info.imgurl);
 								}
 								adView.setUrls(urllist, R.drawable.ad_src);
@@ -331,6 +306,7 @@ public class HomePageBestListActivity extends ListBaseActivity {
 					
 				});
 			}
+			// é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿç»æ’…æ‹·é”Ÿæ–¤æ‹·é”Ÿï¿½
 			boolean isflag=SharedPreferencesControl.getInstance().getBoolean(
 					"softUpdateTip",com.appdear.client.commctrls.Common.SETTINGS, HomePageBestListActivity.this);	
 			if(isflag){
@@ -347,75 +323,13 @@ public class HomePageBestListActivity extends ListBaseActivity {
 					
 				}.start();
 			}
-			//µÚÒ»´Î¼ÓÔØ½øÈë»º´æ²»ĞèÒªÔÙ´Î¼ÓÔØÊı¾İ½øÈë»º´æ
-			if(iscachesoftlist==true){
-				ApiSoftListResult result=null;
-				try {
-					HomeObj homeobj1=new HomeObj();
-					String dynamic=getDynamic(homeobj!=null?homeobj.getDynamic():InitModel.dynamic[0]);
-					result = ApiManager.dynamicsoftlist2(id1+"", 1 + "", PAGE_SIZE + "",dynamic);
-					List<SoftlistInfo> listData = result.softList;
-					int totalcount=result.totalcount;
-					AppContext.getInstance().dynamicnew=dynamic;
-					if(result.def!=null&&!result.def.equals("1")){
-				//		homeobj1.setTimestamp(new Date().getTime()+result.timpstamp);
-						homeobj1.setTimestamp(new Date().getTime()+result.timpstamp);
-						homeobj1.setDynamic(dynamic);
-						homeobj1.setListData(listData);
-						homeobj1.setAsids(result.asids);
-						ServiceUtils.addListview(SourceCommon.HOME_FIRST_NEW, homeobj1, HomePageBestListActivity.this, result.totalcount);
-					}
-					if(result.def!=null&&result.def.equals("1")){
-						ListviewSourceCache.getInstance().removeInitModel(SourceCommon.HOME_FIRST_NEW);
-					}
-				} catch (ApiException e) {
-					// TODO Auto-generated catch block
-				}
-			}
-			//Ö®ºó×ß»º´æĞÅÏ¢ºó£¬ĞèÒªÔÙ´Î¼ÓÔØÏÂ´ÎµÄÊı¾İ
-			iscachesoftlist=true;
-			//if(AppContext.getInstance().isFirstInit==false){
-				new Timer().schedule(new MyTimeTask(id),5000);
-			//}
-			
-			if(flag==true){
-				flag=false;
-				if(SharedPreferencesControl.getInstance().getBoolean("issave",com.appdear.client.commctrls.Common.USERPASSWDXML,HomePageBestListActivity.this)){
-					String username=SharedPreferencesControl.getInstance().getString("username",com.appdear.client.commctrls.Common.USERPASSWDXML,HomePageBestListActivity.this);
-					String passwd=SharedPreferencesControl.getInstance().getString("passwd",com.appdear.client.commctrls.Common.USERPASSWDXML,HomePageBestListActivity.this);
-					if(username!=null&&passwd!=null&&!username.equals("")&&!passwd.equals("")){	
-							try {
-								result1=ApiManager.userlogin(SharedPreferencesControl.getInstance().getString("username",com.appdear.client.commctrls.Common.USERPASSWDXML,HomePageBestListActivity.this),SharedPreferencesControl.getInstance().getString("passwd",com.appdear.client.commctrls.Common.USERPASSWDXML,HomePageBestListActivity.this));
-							} catch (ApiException e) {
-								e.printStackTrace();
-								return;
-							}
-							try{
-							SharedPreferencesControl.getInstance().putString("sessionid",result1.token,com.appdear.client.commctrls.Common.USERLOGIN_XML,HomePageBestListActivity.this);
-							SharedPreferencesControl.getInstance().putString("userid",result1.userid+"",com.appdear.client.commctrls.Common.USERLOGIN_XML,HomePageBestListActivity.this);
-							SharedPreferencesControl.getInstance().putString("nickname",result1.nickname,com.appdear.client.commctrls.Common.USERLOGIN_XML,HomePageBestListActivity.this);
-							SharedPreferencesControl.getInstance().putString("username",SharedPreferencesControl.getInstance().getString("username",com.appdear.client.commctrls.Common.USERPASSWDXML,HomePageBestListActivity.this),com.appdear.client.commctrls.Common.USERLOGIN_XML,HomePageBestListActivity.this);
-							}catch(Exception e){
-								return;
-							}
-							try {
-								result1=ApiManager.userprofile(SharedPreferencesControl.getInstance().getString("userid",com.appdear.client.commctrls.Common.USERLOGIN_XML,HomePageBestListActivity.this),SharedPreferencesControl.getInstance().getString("sessionid",com.appdear.client.commctrls.Common.USERLOGIN_XML,HomePageBestListActivity.this));
-							} catch (ApiException e) {
-								e.printStackTrace();
-								return;
-							}
-							SharedPreferencesControl.getInstance().putString("account",String.valueOf(result1.account),com.appdear.client.commctrls.Common.USERLOGIN_XML,HomePageBestListActivity.this);
-							SharedPreferencesControl.getInstance().putString("level",result1.level.equals("")?"°®Æ¤Ğ¡½«":result1.level,com.appdear.client.commctrls.Common.USERLOGIN_XML,HomePageBestListActivity.this);
-							SharedPreferencesControl.getInstance().putString("point",String.valueOf(result1.totalpoint),com.appdear.client.commctrls.Common.USERLOGIN_XML,HomePageBestListActivity.this);
-							SharedPreferencesControl.getInstance().putString("gender",String.valueOf(result1.userinfo.gender),com.appdear.client.commctrls.Common.USERLOGIN_XML,HomePageBestListActivity.this);
-						    return;
-						   }
-				   }
-			}
+                // é”Ÿä»‹çœ‹é”Ÿè§’å‡¤æ‹·çš®é”Ÿæ–¤æ‹·
+			new Timer().schedule(new MyTimeTask(id),5000);
+	 
 			if(ServiceUtils.isWiFiActive(HomePageBestListActivity.this)){
-				Location.getWifiLocation(HomePageBestListActivity.this);
+				//Location.getWifiLocation(HomePageBestListActivity.this);
 			}else{
-				Location.getLocations(HomePageBestListActivity.this);
+				//Location.getLocations(HomePageBestListActivity.this);
 			}
 			
 			try{
@@ -474,22 +388,22 @@ public class HomePageBestListActivity extends ListBaseActivity {
 					notificationIntent.addFlags(Notification.FLAG_AUTO_CANCEL);
 						
 	 				 String	msgText="";
-					 if(nowDate.equals(date1))
+	 				 if(nowDate.equals(date1))
 					  {
-							msgText="7Ìì°üÍË»¹ÓĞÒ»Ììµ½ÆÚ";
-						  showNotification(notification,notificationIntent,10,msgText,msgText+"Çëµã»÷²é¿´");
+							msgText="7å¤©åŒ…é€€è¿˜æœ‰ä¸€å¤©åˆ°æœŸ";
+						  showNotification(notification,notificationIntent,10,msgText,msgText+"è¯·ç‚¹å‡»æŸ¥çœ‹");
 					  }else  if(nowDate.equals(date2))
 					  {
-						  msgText="15Ìì°ü»»»¹ÓĞÒ»Ììµ½ÆÚ";
-						  showNotification(notification,notificationIntent,10,msgText,msgText+"Çëµã»÷²é¿´");
+						  msgText="15å¤©åŒ…æ¢è¿˜æœ‰ä¸€å¤©åˆ°æœŸ";
+						  showNotification(notification,notificationIntent,10,msgText,msgText+"è¯·ç‚¹å‡»æŸ¥çœ‹");
 					  }else  if(nowDate.equals(date3))
 					  {
-						  msgText="Åä¼ş°ëÄê±£ĞŞ»¹ÓĞÒ»Ììµ½ÆÚ";
-						  showNotification(notification,notificationIntent,10,msgText,msgText+"Çëµã»÷²é¿´");
+						  msgText="é…ä»¶åŠå¹´ä¿ä¿®è¿˜æœ‰ä¸€å¤©åˆ°æœŸ";
+						  showNotification(notification,notificationIntent,10,msgText,msgText+"è¯·ç‚¹å‡»æŸ¥çœ‹");
 					  }else  if(nowDate.equals(date4))
 					  {
-						  msgText="1ÄêÃâ·ÑÎ¬ĞŞ»¹ÓĞÒ»Ììµ½ÆÚ";
-						  showNotification(notification,notificationIntent,10,msgText,msgText+"Çëµã»÷²é¿´");
+						  msgText="1å¹´å…è´¹ç»´ä¿®è¿˜æœ‰ä¸€å¤©åˆ°æœŸ";
+						  showNotification(notification,notificationIntent,10,msgText,msgText+"è¯·ç‚¹å‡»æŸ¥çœ‹");
 					  } 
 			}
 			}catch(Exception e)
@@ -502,17 +416,13 @@ public class HomePageBestListActivity extends ListBaseActivity {
 		}
 		 
 	}
-	/**
-	 * ·¢³öÍ¨Öª
-	 * @param notification Í¨Öª
-	 * @param notificationIntent µã»÷Í¨ÖªµÄÌø×ªintent
-	 */
+	 
 	private void showNotification(Notification notification,Intent notificationIntent,int id,String title,String contextText){
 		  NotificationManager  notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-		//¶¨ÒåÊÂ¼ş
+		//é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿé“°ç¡·æ‹·
 		PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
 		notification.contentIntent = contentIntent;
-		//·¢³öÍ¨Öª
+		//é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é€šçŸ¥
 		
 		if(notification !=null){
 			notification.flags |= Notification.FLAG_AUTO_CANCEL;  
@@ -532,7 +442,7 @@ public class HomePageBestListActivity extends ListBaseActivity {
 		return strs.get(rand.nextInt(strs.size()-1));
 	}
 	/**
-	 * µ±Ç°Ïî²Ù×÷
+	 * é”Ÿæ–¤æ‹·å‰é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿï¿½
 	 * @param position
 	 */
 	public void setSelectedValues(int position) {
@@ -556,18 +466,9 @@ public class HomePageBestListActivity extends ListBaseActivity {
 			return;
 		}
 		try {
-			result = null;
-			String dyn="";
-			if(defflag==false){
-				dyn=homeobj!=null?homeobj.getDynamic():InitModel.dynamic[0];
-			}
-			result = ApiManager.dynamicsoftlist2(id+"", page + "", PAGE_SIZE + "",dyn,getAsids(page));
-			if(result!=null){
-				ServiceUtils.setSoftState(this,result.softList); 
-			} 
-			if(result.def!=null&&result.def.equals("1")){
-				ListviewSourceCache.getInstance().removeInitModel(SourceCommon.HOME_FIRST_NEW);
-			}
+			result = ApiManager.softlist(id+"", page + "", PAGE_SIZE + "");
+			ServiceUtils.setSoftState(this,result.softList); 
+			 
 		} catch (ApiException e) {
 			if (Constants.DEBUG)
 				Log.e("ApiException error:",e.getMessage(), e);
@@ -587,7 +488,7 @@ public class HomePageBestListActivity extends ListBaseActivity {
 		backgroundService.putExtra("update",AppContext.getInstance().info);
 		this.startService(backgroundService);
 	}
-	//»º´æ³õÊ¼»¯½Ó¿ÚĞÅÏ¢£¬ÊÊÊ±ÅĞ¶ÏÊÇ·ñÓĞÊı¾İ¸üĞÂ»òÉı¼¶ĞÅÏ¢
+	//é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿç»ç¡·æ‹·é”Ÿæ–¤æ‹·æ¶Œé”Ÿæ–¤æ‹·é”Ÿè¾ƒî–æ‹·é”Ÿæ–¤æ‹·é”Ÿç»æ†‹æ‹·å¸é”Ÿæ–¤æ‹·æ¬ é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·é”Ÿæ·é©æ‹·é”Ÿé“°ä¼™æ‹·é”Ÿæ–¤æ‹·é”Ÿæ–¤æ‹·æ¯
 	class MyTimeTask extends TimerTask{
 		private int id=0;
 		public MyTimeTask(int id){
@@ -612,25 +513,7 @@ public class HomePageBestListActivity extends ListBaseActivity {
 		
 	}
 	
-	private String getAsids(int page){
-		StringBuffer sb=null;
-		if(asids!=null&&!asids.equals("")){
-			sb=new StringBuffer();
-			String[] s=asids.split(",");
-			int offset=(page-1)*PAGE_SIZE;
-			if(offset>=s.length)return null;
-			int end=page*PAGE_SIZE-1;
-			end=s.length-1>=end?end:s.length-1;
-			for(int i=offset;i<=end;i++){
-				sb.append(s[i]);
-				if(i<end){
-					sb.append(",");
-				}
-			}
-		}
-		if(sb!=null)return sb.toString();
-		else return null;
-	}
+	 
 }
 
  
