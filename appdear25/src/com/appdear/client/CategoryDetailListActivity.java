@@ -10,8 +10,13 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.AdapterView;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 
 import com.appdear.client.Adapter.SoftwarelistAdatper;
@@ -39,6 +44,13 @@ import com.appdear.client.R;
  */
 public class CategoryDetailListActivity extends ListBaseActivity implements  OnItemClickListener  {
  
+	//change
+	private LinearLayout ll_navigation;
+	TextView tv_navigation;
+	ImageButton btn_return;
+	RelativeLayout tab_ll_linear;
+	String categoryId = null;
+	String categoryTitle = null;
 	
 	/**
 	 * Êý¾Ý
@@ -90,6 +102,29 @@ public class CategoryDetailListActivity extends ListBaseActivity implements  OnI
 	
 	@Override
 	public void init() {
+		//change
+		ll_navigation = (LinearLayout) findViewById(R.id.ll_navigation);
+		ll_navigation.setVisibility(View.VISIBLE);
+		tv_navigation = (TextView) findViewById(R.id.tv_navigation);
+		tab_ll_linear = (RelativeLayout) findViewById(R.id.layout);
+		tab_ll_linear.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				finish();
+			}
+		});
+		btn_return = (ImageButton) findViewById(R.id.btn_return);
+		btn_return.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				finish();
+			}
+		});
+		
+		categoryTitle = this.getIntent().getStringExtra("category_title");
+		categoryId = this.getIntent().getStringExtra("category_id");
+		tv_navigation.setText(this.getIntent().getStringExtra("category_navigation"));
 		listView = (ListViewRefresh)findViewById(R.id.soft_list);
 		this.getWindow().getDecorView().requestFocus();
 		listView.setOnItemClickListener(this);

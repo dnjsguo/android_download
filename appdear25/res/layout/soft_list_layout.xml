@@ -1,11 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/layout"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" 
     android:background="#ffffff">
 
-    <RelativeLayout
+     <LinearLayout
+        android:id="@+id/ll_navigation"
+        android:layout_width="fill_parent"
+        android:layout_height="53dp"
+        android:layout_below="@+id/parent"
+        android:background="@drawable/nav_bg_1"
+        android:orientation="vertical" 
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="3dip"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/dashed_line" android:visibility="gone">
+        </ImageView>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/layout"
+            android:gravity="center">
+           <ImageButton
+                android:id="@+id/btn_return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14dp"
+                android:background="@drawable/tab_img_return"
+                android:layout_centerVertical="true" />
+            <TextView
+                android:id="@+id/tv_navigation"
+              	android:paddingLeft="50dp"
+              	android:paddingRight="50dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:textColor="@color/tabtextcolor"
+               	android:ellipsize="marquee"
+               	android:singleLine="true"
+				android:marqueeRepeatLimit="marquee_forever"
+				android:focusable="true"
+				android:focusableInTouchMode="true"
+                android:textSize="18dp" />
+        </RelativeLayout>
+    </LinearLayout>
+  <!--   <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_alignParentBottom="true"
@@ -18,15 +60,16 @@
         android:layout_centerInParent="true"
         android:text="无"
         android:textSize="20sp"
-        android:visibility="gone" />
+        android:visibility="gone" /> -->
 
     <com.appdear.client.commctrls.ListViewRefresh
+        android:layout_below="@+id/ll_navigation"
         android:id="@+id/soft_list"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:cacheColorHint="#ffffff"
         android:divider="#E6E7EB"
-		android:cacheColorHint="#ffffff" 
-		android:dividerHeight="1px"
+        android:dividerHeight="1px"
         android:drawSelectorOnTop="false"
         android:fadingEdge="none"
         android:scrollingCache="false" />

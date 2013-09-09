@@ -98,8 +98,15 @@ public class CategoryAppActivity extends ListBaseActivity implements OnItemClick
 		//id
 		String categoryId = result.catalogList.get(arg2).catalogid;
 		//显示类别详情
-		Intent categorydetail = new Intent(CategoryAppActivity.this,
+		/*Intent categorydetail = new Intent(CategoryAppActivity.this,
 				CategoryDetailsActivity.class);
+		categorydetail.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		categorydetail.putExtra("category_title", categoryTitle);
+		categorydetail.putExtra("category_id", categoryId);
+		categorydetail.putExtra("category_navigation", "应用-"+categoryTitle);
+		startActivity(categorydetail);*/
+		Intent categorydetail = new Intent(CategoryAppActivity.this,
+				CategoryDetailListActivity.class);
 		categorydetail.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		categorydetail.putExtra("category_title", categoryTitle);
 		categorydetail.putExtra("category_id", categoryId);

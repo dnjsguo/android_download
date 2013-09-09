@@ -99,7 +99,7 @@ public class CategoryGameActivity extends ListBaseActivity implements OnItemClic
 		String categoryId = result.catalogList.get(arg2).catalogid;
 		//显示类别详情
 		Intent categorydetail = new Intent(CategoryGameActivity.this,
-				CategoryDetailsActivity.class);
+				CategoryDetailListActivity.class);//change
 		categorydetail.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		categorydetail.putExtra("category_title", categoryTitle);
 		categorydetail.putExtra("category_id", categoryId);

@@ -275,8 +275,9 @@ public class HomePageBestListActivity extends ListBaseActivity {
     		}
     		int id = SharedPreferencesControl.getInstance().getInt("104", com.appdear.client.commctrls.Common.SECTIONCODEXML, HomePageBestListActivity.this);
 			try {
-				//adresult = ApiManager.bannerlist(id + "", "0", "1", "20");
-				adresult=WangUtil.getAd();
+				//change
+				adresult = ApiManager.bannerlist(id + "", "0", "1", "20");
+//				adresult=WangUtil.getAd();
 			} catch (Exception e) {
 				 
 				e.printStackTrace();
